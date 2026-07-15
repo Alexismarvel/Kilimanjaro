@@ -5,8 +5,8 @@
     padding: 60px 24px 40px;
     text-align: center;
     overflow: hidden;
-    background: rgba(245, 245, 245, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-default);
 }
 
 .shop-hero-glow {
@@ -43,7 +43,7 @@
 
 .shop-hero-subtitle {
     font-size: 15px;
-    color: #0B3954;
+    color: var(--accent-text);
 }
 
 /* ===================== SHOP CONTAINER ===================== */
@@ -73,9 +73,9 @@
     font-size: 13px;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    color: #0B3954;
-    background-color: rgba(245, 245, 245, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--accent-text);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-default);
     border-radius: 9999px;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -83,9 +83,9 @@
 }
 
 .filter-btn:hover {
-    color: #333333;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-secondary);
+    background-color: var(--bg-input);
+    border-color: var(--border-input-hover);
 }
 
 .filter-btn.active {
@@ -102,12 +102,12 @@
     align-items: center;
     margin-bottom: 20px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid var(--border-default);
 }
 
 .results-count {
     font-size: 13px;
-    color: #0B3954;
+    color: var(--accent-text);
 }
 
 .results-count span {
@@ -120,14 +120,14 @@
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    color: #0B3954;
+    color: var(--accent-text);
 }
 
 .sort-control select {
-    background-color: rgba(245, 245, 245, 0.6);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-strong);
     border-radius: 8px;
-    color: #333333;
+    color: var(--text-secondary);
     font-size: 13px;
     font-family: 'Inter', sans-serif;
     padding: 6px 10px;
@@ -137,12 +137,12 @@
 }
 
 .sort-control select:focus {
-    border-color: rgba(23, 190, 187, 0.4);
+    border-color: rgba(var(--accent-rgb), 0.4);
 }
 
 .sort-control select option {
-    background-color: #f5f5f5;
-    color: #333333;
+    background-color: var(--bg-surface-solid);
+    color: var(--text-secondary);
 }
 
 /* ===================== PRODUCT GRID ===================== */
@@ -702,6 +702,213 @@
         opacity: 0;
         transform: translateY(16px) scale(0.95);
     }
+}
+
+/* ===================== TRANSACTION MODAL ===================== */
+.txn-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 400;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.txn-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.txn-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 400px;
+    max-width: 90vw;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    z-index: 401;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.35);
+}
+
+.txn-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.txn-content {
+    padding: 40px 32px 32px;
+    text-align: center;
+}
+
+.txn-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Spinner */
+.txn-spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid rgba(11, 57, 84, 0.12);
+    border-top-color: #0B3954;
+    border-radius: 50%;
+    animation: txnSpin 0.8s linear infinite;
+}
+
+@keyframes txnSpin {
+    to { transform: rotate(360deg); }
+}
+
+.txn-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.txn-text {
+    font-size: 13px;
+    color: #777777;
+}
+
+/* Progress bar */
+.txn-progress {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(11, 57, 84, 0.1);
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.txn-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #0B3954, #17BEBB);
+    border-radius: 9999px;
+    transition: width 0.4s ease;
+}
+
+/* Success checkmark */
+.txn-receipt-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 4px;
+}
+
+.txn-receipt-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.txn-check {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: txnDraw 0.5s ease 0.2s forwards;
+}
+
+@keyframes txnDraw {
+    to { stroke-dashoffset: 0; }
+}
+
+.txn-success-title {
+    color: #0B3954;
+}
+
+/* Receipt */
+.txn-receipt {
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.txn-receipt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 6px 0;
+}
+
+.txn-receipt-header {
+    font-weight: 600;
+    color: #1a1a1a;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+}
+
+.txn-receipt-header span:last-child {
+    font-family: monospace;
+    font-size: 12px;
+    color: #0B3954;
+}
+
+.txn-receipt-items {
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+.txn-receipt-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #666666;
+    padding: 4px 0;
+}
+
+.txn-receipt-item-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.txn-receipt-item-emoji {
+    font-size: 14px;
+}
+
+.txn-receipt-total {
+    font-weight: 700;
+    color: #0B3954;
+    font-size: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 10px;
+    margin-top: 6px;
+}
+
+.txn-receipt-date {
+    justify-content: center;
+    font-size: 11px;
+    color: #777777;
+    padding-top: 4px;
+}
+
+.txn-done-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Inter', sans-serif;
 }
 
 /* ===================== RESPONSIVE ===================== */

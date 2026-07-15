@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="customize.css">
 </head>
 <body>
 
@@ -173,10 +174,111 @@
         </div>
     </aside>
 
+    <!-- ============ TRANSACTION MODAL ============ -->
+    <div class="txn-overlay" id="txnOverlay"></div>
+    <div class="txn-modal" id="txnModal">
+        <div class="txn-content" id="txnContent">
+            <!-- Step 1: Processing -->
+            <div class="txn-step" id="txnStep1">
+                <div class="txn-spinner"></div>
+                <h3 class="txn-title">Processing Payment</h3>
+                <p class="txn-text">Verifying your order details...</p>
+                <div class="txn-progress">
+                    <div class="txn-progress-bar" id="txnProgress1"></div>
+                </div>
+            </div>
+            <!-- Step 2: Confirming -->
+            <div class="txn-step" id="txnStep2" style="display:none;">
+                <div class="txn-spinner"></div>
+                <h3 class="txn-title">Confirming Transaction</h3>
+                <p class="txn-text">Connecting to payment gateway...</p>
+                <div class="txn-progress">
+                    <div class="txn-progress-bar" id="txnProgress2"></div>
+                </div>
+            </div>
+            <!-- Step 3: Receipt -->
+            <div class="txn-step" id="txnStep3" style="display:none;">
+                <div class="txn-receipt-icon">
+                    <svg viewBox="0 0 52 52" fill="none">
+                        <circle cx="26" cy="26" r="25" stroke="#0B3954" stroke-width="2"/>
+                        <path class="txn-check" d="M14 27l7 7 16-16" stroke="#0B3954" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="txn-title txn-success-title">Payment Successful</h3>
+                <div class="txn-receipt">
+                    <div class="txn-receipt-row txn-receipt-header">
+                        <span>Order Receipt</span>
+                        <span id="txnOrderId">#KIL-0000</span>
+                    </div>
+                    <div class="txn-receipt-items" id="txnReceiptItems"></div>
+                    <div class="txn-receipt-row txn-receipt-total">
+                        <span>Total Paid</span>
+                        <span id="txnReceiptTotal">$0.00</span>
+                    </div>
+                    <div class="txn-receipt-row txn-receipt-date">
+                        <span id="txnDate"></span>
+                    </div>
+                </div>
+                <button class="action-btn btn-primary txn-done-btn" id="txnDoneBtn">Done</button>
+            </div>
+        </div>
+    </div>
+
     <!-- ============ TOAST ============ -->
     <div class="toast-container" id="toastContainer"></div>
 
     <script src="script.js"></script>
     <script src="products.js"></script>
+    <script src="customize.js"></script>
+    <!-- ============ CUSTOMIZE PANEL ============ -->
+    <button class="customize-fab" id="customizeFab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+    </button>
+    <div class="customize-overlay" id="customizeOverlay"></div>
+    <div class="customize-panel" id="customizePanel">
+        <div class="customize-panel-header">
+            <h3>Customize</h3>
+            <button class="customize-close" id="customizeClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div class="customize-panel-body">
+            <div>
+                <p class="customize-section-label">Theme</p>
+                <div class="customize-theme-toggle">
+                    <button class="customize-theme-btn active" data-theme="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span>Light</span></button>
+                    <button class="customize-theme-btn" data-theme="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span>Dark</span></button>
+                </div>
+            </div>
+            <div>
+                <p class="customize-section-label">Accent Color</p>
+                <div class="customize-swatches">
+                    <button class="customize-swatch active" data-accent="teal" style="background:#0B3954;" title="Teal"></button>
+                    <button class="customize-swatch" data-accent="ocean" style="background:#0077B6;" title="Ocean"></button>
+                    <button class="customize-swatch" data-accent="emerald" style="background:#2D6A4F;" title="Emerald"></button>
+                    <button class="customize-swatch" data-accent="violet" style="background:#5A189A;" title="Violet"></button>
+                    <button class="customize-swatch" data-accent="rose" style="background:#9B2226;" title="Rose"></button>
+                    <button class="customize-swatch" data-accent="amber" style="background:#BC6C25;" title="Amber"></button>
+                    <button class="customize-swatch" data-accent="slate" style="background:#495057;" title="Slate"></button>
+                    <button class="customize-swatch" data-accent="brand" style="background:#17BEBB;" title="Brand"></button>
+                </div>
+            </div>
+            <div>
+                <p class="customize-section-label">Border Radius</p>
+                <div class="customize-radius-options">
+                    <button class="customize-radius-btn" data-radius="sharp"><div class="customize-radius-preview" style="border-radius:2px;"></div><span>Sharp</span></button>
+                    <button class="customize-radius-btn active" data-radius="rounded"><div class="customize-radius-preview" style="border-radius:8px;"></div><span>Rounded</span></button>
+                    <button class="customize-radius-btn" data-radius="pill"><div class="customize-radius-preview" style="border-radius:16px;"></div><span>Pill</span></button>
+                </div>
+            </div>
+            <div>
+                <p class="customize-section-label">Font Size</p>
+                <div class="customize-fontsize-options">
+                    <button class="customize-fontsize-btn" data-fontsize="small"><span>A</span></button>
+                    <button class="customize-fontsize-btn active" data-fontsize="default"><span style="font-size:14px;">A</span></button>
+                    <button class="customize-fontsize-btn" data-fontsize="large"><span style="font-size:18px;">A</span></button>
+                </div>
+            </div>
+            <button class="customize-reset" id="customizeReset">Reset to Defaults</button>
+        </div>
+    </div>
 </body>
 </html>

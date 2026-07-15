@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #1a1a1a;
-    color: #1a1a1a;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,10 +22,10 @@ body {
     top: 0;
     z-index: 100;
     width: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--navbar-bg);
+    backdrop-filter: var(--navbar-blur);
+    -webkit-backdrop-filter: var(--navbar-blur);
+    border-bottom: 1px solid var(--border-default);
     padding: 0 24px;
 }
 
@@ -94,7 +94,7 @@ body {
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
-    color: #0B3954;
+    color: var(--accent-text);
     padding: 6px 14px;
     border-radius: 8px;
     transition: all 0.25s ease;
@@ -102,8 +102,8 @@ body {
 }
 
 .nav-link:hover {
-    color: #333333;
-    background-color: rgba(0, 0, 0, 0.04);
+    color: var(--text-secondary);
+    background-color: var(--bg-input);
 }
 
 .nav-link.active {
@@ -136,22 +136,22 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-input);
     border-radius: 8px;
     padding: 6px 12px;
     transition: all 0.25s ease;
 }
 
 .nav-search:focus-within {
-    border-color: rgba(23, 190, 187, 0.4);
-    background-color: rgba(23, 190, 187, 0.05);
+    border-color: rgba(var(--accent-rgb), 0.4);
+    background-color: var(--bg-input-focus);
 }
 
 .nav-search svg {
     width: 16px;
     height: 16px;
-    color: #777777;
+    color: var(--text-subtle);
     flex-shrink: 0;
 }
 
@@ -159,7 +159,7 @@ body {
     background: none;
     border: none;
     outline: none;
-    color: #333333;
+    color: var(--text-secondary);
     font-size: 13px;
     font-family: 'Inter', sans-serif;
     width: 140px;
@@ -181,9 +181,9 @@ body {
     width: 34px;
     height: 34px;
     background: none;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-default);
     border-radius: 8px;
-    color: #666666;
+    color: var(--text-muted);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -192,9 +192,9 @@ body {
 }
 
 .nav-icon-btn:hover {
-    background-color: rgba(0, 0, 0, 0.06);
-    color: #333333;
-    border-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-input);
+    color: var(--text-secondary);
+    border-color: var(--border-input-hover);
 }
 
 .nav-icon-btn svg {
@@ -208,9 +208,9 @@ body {
     right: 5px;
     width: 7px;
     height: 7px;
-    background-color: #17BEBB;
+    background-color: var(--accent);
     border-radius: 50%;
-    border: 1.5px solid #1a1a1a;
+    border: 1.5px solid var(--bg-body);
     animation: pulse 2s infinite;
 }
 
@@ -222,14 +222,14 @@ body {
     height: 16px;
     font-size: 10px;
     font-weight: 700;
-    color: #1a1a1a;
-    background-color: #17BEBB;
+    color: var(--bg-body);
+    background-color: var(--accent);
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 4px;
-    border: 1.5px solid #1a1a1a;
+    border: 1.5px solid var(--bg-body);
 }
 
 .navbar .user-avatar {
@@ -272,7 +272,7 @@ body {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: #666666;
+    background-color: var(--text-muted);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -303,13 +303,13 @@ body {
     position: relative;
     width: 100%;
     max-width: 960px;
-    background: rgba(245, 245, 245, 0.7);
+    background: var(--bg-surface);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-strong);
     border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-panel);
     overflow: hidden;
     margin: 24px auto;
 }
@@ -450,7 +450,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--border-default);
     padding-bottom: 16px;
     margin-bottom: 24px;
 }
@@ -469,19 +469,19 @@ body {
 
 .last-sync {
     font-size: 12px;
-    color: #0B3954;
+    color: var(--accent-text);
 }
 
 .btn-outline {
     background: transparent;
-    color: #0B3954;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--accent-text);
+    border: 1px solid var(--border-strong);
 }
 
 .btn-outline:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #333333;
-    border-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--bg-input);
+    color: var(--text-secondary);
+    border-color: var(--border-input-hover);
 }
 
 .status-badge {
@@ -515,8 +515,8 @@ body {
 }
 
 .metric-card {
-    background-color: rgba(245, 245, 245, 0.5);
-    border: 1px solid #e5e5e5;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-default);
     border-radius: 12px;
     padding: 16px;
     transition: all 0.3s ease;
@@ -524,7 +524,7 @@ body {
 }
 
 .metric-card:hover {
-    border-color: rgba(23, 190, 187, 0.3);
+    border-color: rgba(var(--accent-rgb), 0.3);
     transform: translateY(-2px);
     box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
 }
@@ -532,7 +532,7 @@ body {
 .metric-label {
     font-size: 12px;
     font-weight: 600;
-    color: #0B3954;
+    color: var(--accent-text);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -540,7 +540,7 @@ body {
 .metric-value-num {
     font-size: 24px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--text-primary);
     margin-top: 4px;
 }
 
@@ -564,13 +564,13 @@ body {
 
 .metric-subtext {
     font-size: 11px;
-    color: #0B3954;
+    color: var(--accent-text);
     margin-top: 8px;
 }
 
 .progress-bar-container {
     width: 100%;
-    background-color: #e5e5e5;
+    background-color: var(--border-default);
     height: 6px;
     border-radius: 9999px;
     margin-top: 12px;
@@ -592,8 +592,8 @@ body {
 
 /* ===================== RIGHT PANEL (LOG STREAM) ===================== */
 .right-panel {
-    background-color: rgba(245, 245, 245, 0.4);
-    border: 1px solid rgba(200, 200, 200, 0.8);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-panel);
     border-radius: 12px;
     padding: 20px;
     display: flex;
@@ -611,7 +611,7 @@ body {
 .panel-title {
     font-size: 14px;
     font-weight: 600;
-    color: #333333;
+    color: var(--text-secondary);
     letter-spacing: 0.02em;
 }
 
@@ -628,9 +628,9 @@ body {
 .log-stream {
     font-family: monospace;
     font-size: 12px;
-    color: #666666;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(200, 200, 200, 0.5);
+    color: var(--text-muted);
+    background-color: var(--bg-terminal);
+    border: 1px solid var(--border-divider);
     border-radius: 8px;
     padding: 16px;
     height: 192px;
@@ -661,7 +661,7 @@ body {
 }
 
 .log-stream::-webkit-scrollbar-track {
-    background: rgba(220, 220, 220, 0.3);
+    background: var(--border-default);
     border-radius: 3px;
 }
 
@@ -679,14 +679,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(200, 200, 200, 0.6);
+    border-top: 1px solid var(--border-divider);
     padding-top: 16px;
     margin-top: 16px;
 }
 
 .timestamp {
     font-size: 12px;
-    color: #0B3954;
+    color: var(--accent-text);
 }
 
 .action-btn {
@@ -741,11 +741,11 @@ body {
         top: 64px;
         left: 0;
         right: 0;
-        background: rgba(255, 255, 255, 0.95);
+        background: var(--bg-elevated);
         backdrop-filter: blur(16px);
         flex-direction: column;
         padding: 12px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        border-bottom: 1px solid var(--border-default);
     }
 
     .nav-links.open {

@@ -285,11 +285,17 @@ function initCart() {
     const overlay = document.getElementById('cartOverlay');
     const close = document.getElementById('cartClose');
     const continueBtn = document.getElementById('continueShopping');
+    const checkoutBtn = document.querySelector('.btn-checkout');
+    const txnDoneBtn = document.getElementById('txnDoneBtn');
+    const txnOverlay = document.getElementById('txnOverlay');
 
     if (toggle) toggle.addEventListener('click', () => openCart());
     if (close) close.addEventListener('click', () => closeCart());
     if (overlay) overlay.addEventListener('click', () => closeCart());
     if (continueBtn) continueBtn.addEventListener('click', () => closeCart());
+    if (checkoutBtn) checkoutBtn.addEventListener('click', () => startTransaction());
+    if (txnDoneBtn) txnDoneBtn.addEventListener('click', () => closeTransaction());
+    if (txnOverlay) txnOverlay.addEventListener('click', () => closeTransaction());
 }
 
 function openCart() {
@@ -453,4 +459,86 @@ function initNavbar() {
             navLinks?.classList.remove('open');
         }
     });
+}
+
+// ===================== TRANSACTION SIMULATION =====================
+function startTransaction() {
+    if (cart.length === 0) return;
+
+    closeCart();
+
+    const overlay = document.getElementById('txnOverlay');
+    const modal = document.getElementById('txnModal');
+    const step1 = document.getElementById('txnStep1');
+    const step2 = document.getElementById('txnStep2');
+    const step3 = document.getElementById('txnStep3');
+
+    // Reset
+    step1.style.display = '';
+    step2.style.display = 'none';
+    step3.style.display = 'none';
+    document.getElementById('txnProgress1').style.width = '0%';
+    document.getElementById('txnProgress2').style.width = '0%';
+
+    overlay.classList.add('open');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    // Step 1: Processing
+    setTimeout(() => {
+        document.getElementById('txnProgress1').style.width = '100%';
+    }, 100);
+
+    setTimeout(() => {
+        step1.style.display = 'none';
+        step2.style.display = '';
+        setTimeout(() => {
+            document.getElementById('txnProgress2').style.width = '100%';
+        }, 100);
+    }, 1800);
+
+    // Step 2: Confirming → Step 3: Receipt
+    setTimeout(() => {
+        step2.style.display = 'none';
+        step3.style.display = '';
+        buildReceipt();
+    }, 3400);
+}
+
+function buildReceipt() {
+    const total = cart.reduce((sum, c) => sum + c.price * c.qty, 0);
+    const orderId = 'KIL-' + Math.floor(1000 + Math.random() * 9000);
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+
+    document.getElementById('txnOrderId').textContent = '#' + orderId;
+    document.getElementById('txnReceiptTotal').textContent = '$' + total.toFixed(2);
+    document.getElementById('txnDate').textContent = dateStr + ' at ' + timeStr;
+
+    const itemsEl = document.getElementById('txnReceiptItems');
+    itemsEl.innerHTML = cart.map(item => `
+        <div class="txn-receipt-item">
+            <span class="txn-receipt-item-name">
+                <span class="txn-receipt-item-emoji">${item.emoji}</span>
+                ${item.name}${item.qty > 1 ? ' x' + item.qty : ''}
+            </span>
+            <span>$${(item.price * item.qty).toFixed(2)}</span>
+        </div>
+    `).join('');
+}
+
+function closeTransaction() {
+    const overlay = document.getElementById('txnOverlay');
+    const modal = document.getElementById('txnModal');
+
+    overlay.classList.remove('open');
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+
+    // Clear cart after successful transaction
+    cart = [];
+    updateCartUI();
+    renderProducts();
+    showToast('Order placed successfully!');
 }
