@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Dashboard</title>
+    <title>Kilimanjaro — Shop Quality Products</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
 
@@ -33,11 +34,9 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link active">Dashboard</a></li>
-                <li><a href="products.html" class="nav-link">Products</a></li>
-                <li><a href="#" class="nav-link">Orders</a></li>
-                <li><a href="#" class="nav-link">Customers</a></li>
-                <li><a href="#" class="nav-link">Analytics</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="products.html" class="nav-link">Shop</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
             </ul>
 
             <div class="nav-right">
@@ -46,7 +45,7 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Search products..." id="homeSearchInput">
                 </div>
                 <div class="nav-icons">
                     <button class="nav-icon-btn" id="notifBtn">
@@ -55,14 +54,6 @@
                             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                         </svg>
                         <span class="notif-dot"></span>
-                    </button>
-                    <button class="nav-icon-btn cart-nav-btn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="9" cy="21" r="1"></circle>
-                            <circle cx="20" cy="21" r="1"></circle>
-                            <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                        </svg>
-                        <span class="cart-count">3</span>
                     </button>
                     <div class="user-avatar">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -80,85 +71,139 @@
         </div>
     </nav>
 
-    <!-- ============ DASHBOARD PANEL ============ -->
-    <div class="glass-panel">
-        
-        <div class="glow glow-top-left"></div>
-        <div class="glow glow-bottom-right"></div>
-
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <span class="status-badge">Status: Active</span>
-                <span class="last-sync">Last synced: <span id="lastSync">just now</span></span>
+    <!-- ============ HERO SECTION ============ -->
+    <section class="home-hero">
+        <div class="home-hero-glow home-glow-left"></div>
+        <div class="home-hero-glow home-glow-right"></div>
+        <div class="home-hero-content">
+            <p class="home-hero-tag">Welcome to Kilimanjaro</p>
+            <h1 class="home-hero-title">Discover Quality Products for Every Occasion</h1>
+            <p class="home-hero-subtitle">From fashion to tech, home essentials to fitness gear — explore our curated collection of top-rated products.</p>
+            <div class="home-hero-actions">
+                <a href="products.html" class="action-btn btn-primary home-cta">Browse Shop</a>
+                <a href="#categories" class="action-btn btn-outline home-cta-outline">Explore Categories</a>
             </div>
-            <div class="top-bar-right">
-                <button class="action-btn btn-outline">Export</button>
-                <button class="action-btn btn-primary">+ New Product</button>
+            <div class="home-hero-stats">
+                <div class="home-stat">
+                    <span class="home-stat-num">60+</span>
+                    <span class="home-stat-label">Products</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-num">9</span>
+                    <span class="home-stat-label">Categories</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-num">4.7</span>
+                    <span class="home-stat-label">Avg. Rating</span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="dashboard-grid">
-            
-            <div class="left-panel">
-                <div class="metric-card">
-                    <p class="metric-label">Total Revenue</p>
-                    <div class="metric-flex">
-                        <p class="metric-value-num" style="color: #2D93AD;">$48,294</p>
-                        <span class="trend-up">↑ 18.2%</span>
-                    </div>
-                </div>
-                
-                <div class="metric-card">
-                    <p class="metric-label">Active Orders</p>
-                    <div class="metric-flex">
-                        <p class="metric-value-num" style="color: #F3A712;">1,247</p>
-                        <span class="trend-up">↑ 8.5%</span>
-                    </div>
-                </div>
-
-                <div class="metric-card">
-                    <p class="metric-label">Products Listed</p>
-                    <p class="metric-value-num">3,842</p>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar-fill"></div>
-                    </div>
-                    <p class="metric-subtext">78% catalog capacity</p>
-                </div>
-
-                <div class="metric-card">
-                    <p class="metric-label">Conversion Rate</p>
-                    <div class="metric-flex">
-                        <p class="metric-value-num" style="color: #92140C;">4.8%</p>
-                        <span class="trend-down">↓ 1.2%</span>
-                    </div>
-                </div>
+    <!-- ============ CATEGORIES SECTION ============ -->
+    <section class="home-section" id="categories">
+        <div class="home-container">
+            <div class="home-section-header">
+                <h2 class="home-section-title">Shop by Category</h2>
+                <p class="home-section-subtitle">Find exactly what you need across our curated collections</p>
             </div>
-
-            <div class="right-panel">
-                <div class="panel-header">
-                    <h3 class="panel-title">Live Order Feed</h3>
-                    <span class="pulse-indicator"></span>
-                </div>
-                
-                <div class="log-stream" id="orderFeed">
-                    <p><span class="log-tag log-new">[NEW]</span> Order #8847 — Premium Headphones — <span class="text-highlight">$249.99</span></p>
-                    <p><span class="log-tag log-processing">[PROCESS]</span> Payment verified for Order #8842</p>
-                    <p><span class="log-tag log-shipped">[SHIPPED]</span> Tracking updated: <span class="text-highlight">USP-928374</span></p>
-                    <p><span class="log-tag log-new">[NEW]</span> Order #8846 — Running Shoes x2 — <span class="text-highlight">$189.98</span></p>
-                    <p><span class="log-tag log-alert">[ALERT]</span> Low stock: Wireless Mouse (3 remaining)</p>
-                    <p><span class="log-tag log-processing">[PROCESS]</span> Fulfillment started: Order #8839</p>
-                    <p class="log-listening">&gt; Monitoring incoming orders...</p>
-                </div>
-
-                <div class="panel-footer">
-                    <span class="timestamp">Updated <span id="timeAgo">just now</span></span>
-                    <button class="action-btn btn-primary">View All Orders</button>
-                </div>
+            <div class="home-categories-grid">
+                <a href="products.html?category=accessories" class="home-category-card">
+                    <span class="home-category-emoji">👜</span>
+                    <h3 class="home-category-name">Accessories</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=food" class="home-category-card">
+                    <span class="home-category-emoji">☕</span>
+                    <h3 class="home-category-name">Food & Groceries</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=clothing" class="home-category-card">
+                    <span class="home-category-emoji">👟</span>
+                    <h3 class="home-category-name">Clothing</h3>
+                    <p class="home-category-count">20 products</p>
+                </a>
+                <a href="products.html?category=phones" class="home-category-card">
+                    <span class="home-category-emoji">🎧</span>
+                    <h3 class="home-category-name">Phones & Tech</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=utensils" class="home-category-card">
+                    <span class="home-category-emoji">🍳</span>
+                    <h3 class="home-category-name">Utensils</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=party" class="home-category-card">
+                    <span class="home-category-emoji">🎸</span>
+                    <h3 class="home-category-name">Party & Instruments</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=home" class="home-category-card">
+                    <span class="home-category-emoji">🌿</span>
+                    <h3 class="home-category-name">Home & Living</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=sports" class="home-category-card">
+                    <span class="home-category-emoji">🏋️</span>
+                    <h3 class="home-category-name">Sports & Fitness</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
             </div>
-
         </div>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- ============ FEATURED PRODUCTS SECTION ============ -->
+    <section class="home-section home-section-alt" id="featured">
+        <div class="home-container">
+            <div class="home-section-header">
+                <h2 class="home-section-title">Featured Products</h2>
+                <p class="home-section-subtitle">Handpicked top sellers loved by our customers</p>
+            </div>
+            <div class="home-featured-grid" id="featuredGrid">
+                <!-- Injected by JS -->
+            </div>
+            <div class="home-featured-cta">
+                <a href="products.html" class="action-btn btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="home-footer">
+        <div class="home-container">
+            <div class="home-footer-grid">
+                <div class="home-footer-brand">
+                    <span class="brand-name">Kilimanjaro</span>
+                    <p class="home-footer-desc">Quality products curated for every lifestyle. Shop with confidence.</p>
+                </div>
+                <div class="home-footer-links">
+                    <h4>Shop</h4>
+                    <a href="products.html">All Products</a>
+                    <a href="products.html?category=clothing">Clothing</a>
+                    <a href="products.html?category=phones">Tech</a>
+                    <a href="products.html?category=home">Home</a>
+                </div>
+                <div class="home-footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="dashboard.html">Dashboard</a>
+                </div>
+                <div class="home-footer-links">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Shipping</a>
+                </div>
+            </div>
+            <div class="home-footer-bottom">
+                <p>&copy; 2026 Kilimanjaro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
 </body>
 </html>

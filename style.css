@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0b0f19;
-    color: #f3f4f6;
+    background-color: #1a1a1a;
+    color: #1a1a1a;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,10 +22,10 @@ body {
     top: 0;
     z-index: 100;
     width: 100%;
-    background: rgba(11, 15, 25, 0.85);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     padding: 0 24px;
 }
 
@@ -50,10 +50,10 @@ body {
 .navbar .cart-icon {
     width: 32px;
     height: 32px;
-    color: #F3A712;
+    color: #17BEBB;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 0 6px rgba(243, 167, 18, 0.5));
+    filter: drop-shadow(0 0 6px rgba(23, 190, 187, 0.5));
     animation: cartBounce 2s ease-in-out infinite;
 }
 
@@ -65,7 +65,7 @@ body {
 .navbar .brand-name {
     font-size: 18px;
     font-weight: 700;
-    background: linear-gradient(135deg, #F3A712, #2D93AD);
+    background: linear-gradient(135deg, #17BEBB, #00A7E1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -94,7 +94,7 @@ body {
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
-    color: #6b7280;
+    color: #0B3954;
     padding: 6px 14px;
     border-radius: 8px;
     transition: all 0.25s ease;
@@ -102,13 +102,13 @@ body {
 }
 
 .nav-link:hover {
-    color: #d1d5db;
-    background-color: rgba(255, 255, 255, 0.04);
+    color: #333333;
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 .nav-link.active {
-    color: #F3A712;
-    background-color: rgba(243, 167, 18, 0.08);
+    color: #17BEBB;
+    background-color: rgba(23, 190, 187, 0.08);
 }
 
 .nav-link.active::after {
@@ -119,7 +119,7 @@ body {
     transform: translateX(-50%);
     width: 20px;
     height: 2px;
-    background: #F3A712;
+    background: #17BEBB;
     border-radius: 1px;
 }
 
@@ -136,22 +136,22 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     padding: 6px 12px;
     transition: all 0.25s ease;
 }
 
 .nav-search:focus-within {
-    border-color: rgba(45, 147, 173, 0.4);
-    background-color: rgba(45, 147, 173, 0.05);
+    border-color: rgba(23, 190, 187, 0.4);
+    background-color: rgba(23, 190, 187, 0.05);
 }
 
 .nav-search svg {
     width: 16px;
     height: 16px;
-    color: #6b7280;
+    color: #777777;
     flex-shrink: 0;
 }
 
@@ -159,14 +159,14 @@ body {
     background: none;
     border: none;
     outline: none;
-    color: #d1d5db;
+    color: #333333;
     font-size: 13px;
     font-family: 'Inter', sans-serif;
     width: 140px;
 }
 
 .nav-search input::placeholder {
-    color: #4b5563;
+    color: #17BEBB;
 }
 
 /* Icon Buttons */
@@ -181,9 +181,9 @@ body {
     width: 34px;
     height: 34px;
     background: none;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 8px;
-    color: #9ca3af;
+    color: #666666;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -192,9 +192,9 @@ body {
 }
 
 .nav-icon-btn:hover {
-    background-color: rgba(255, 255, 255, 0.06);
-    color: #d1d5db;
-    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.06);
+    color: #333333;
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-icon-btn svg {
@@ -208,9 +208,9 @@ body {
     right: 5px;
     width: 7px;
     height: 7px;
-    background-color: #92140C;
+    background-color: #17BEBB;
     border-radius: 50%;
-    border: 1.5px solid #0b0f19;
+    border: 1.5px solid #1a1a1a;
     animation: pulse 2s infinite;
 }
 
@@ -222,33 +222,33 @@ body {
     height: 16px;
     font-size: 10px;
     font-weight: 700;
-    color: #0b0f19;
-    background-color: #F3A712;
+    color: #1a1a1a;
+    background-color: #17BEBB;
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 4px;
-    border: 1.5px solid #0b0f19;
+    border: 1.5px solid #1a1a1a;
 }
 
 .navbar .user-avatar {
     width: 32px;
     height: 32px;
-    background-color: rgba(45, 147, 173, 0.15);
-    border: 1px solid rgba(45, 147, 173, 0.3);
+    background-color: rgba(23, 190, 187, 0.15);
+    border: 1px solid rgba(23, 190, 187, 0.3);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #2D93AD;
+    color: #17BEBB;
     cursor: pointer;
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
 
 .navbar .user-avatar:hover {
-    background-color: rgba(45, 147, 173, 0.25);
+    background-color: rgba(23, 190, 187, 0.25);
     transform: scale(1.05);
 }
 
@@ -272,7 +272,7 @@ body {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: #9ca3af;
+    background-color: #666666;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -303,10 +303,10 @@ body {
     position: relative;
     width: 100%;
     max-width: 960px;
-    background: rgba(17, 24, 39, 0.7);
+    background: rgba(245, 245, 245, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
@@ -328,13 +328,13 @@ body {
 .glow-top-left {
     top: -96px;
     left: -96px;
-    background-color: #2D93AD;
+    background-color: #17BEBB;
 }
 
 .glow-bottom-right {
     bottom: -96px;
     right: -96px;
-    background-color: #F3A712;
+    background-color: #00A7E1;
 }
 
 /* ===================== LOGO & CONVEYOR BELT ===================== */
@@ -348,10 +348,10 @@ body {
 .cart-icon {
     width: 40px;
     height: 40px;
-    color: #F3A712;
+    color: #17BEBB;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 0 8px rgba(243, 167, 18, 0.5));
+    filter: drop-shadow(0 0 8px rgba(23, 190, 187, 0.5));
     animation: cartBounce 2s ease-in-out infinite;
 }
 
@@ -363,7 +363,7 @@ body {
 .brand-name {
     font-size: 20px;
     font-weight: 700;
-    background: linear-gradient(135deg, #F3A712, #2D93AD);
+    background: linear-gradient(135deg, #17BEBB, #00A7E1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -386,7 +386,7 @@ body {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #92140C, #F3A712, #92140C);
+    background: linear-gradient(90deg, #17BEBB, #00A7E1, #17BEBB);
     border-radius: 2px;
     overflow: hidden;
 }
@@ -420,9 +420,9 @@ body {
 .roller {
     width: 6px;
     height: 6px;
-    background-color: #2D93AD;
+    background-color: #17BEBB;
     border-radius: 50%;
-    border: 1px solid rgba(45, 147, 173, 0.5);
+    border: 1px solid rgba(23, 190, 187, 0.5);
     animation: rollerSpin 0.8s linear infinite;
 }
 
@@ -450,7 +450,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #1f2937;
+    border-bottom: 1px solid #e5e5e5;
     padding-bottom: 16px;
     margin-bottom: 24px;
 }
@@ -469,29 +469,29 @@ body {
 
 .last-sync {
     font-size: 12px;
-    color: #6b7280;
+    color: #0B3954;
 }
 
 .btn-outline {
     background: transparent;
-    color: #9ca3af;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #0B3954;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #d1d5db;
-    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #333333;
+    border-color: rgba(0, 0, 0, 0.15);
 }
 
 .status-badge {
-    background-color: rgba(45, 147, 173, 0.1);
-    color: #2D93AD;
+    background-color: rgba(23, 190, 187, 0.1);
+    color: #17BEBB;
     font-size: 12px;
     font-family: monospace;
     padding: 4px 10px;
     border-radius: 6px;
-    border: 1px solid rgba(45, 147, 173, 0.2);
+    border: 1px solid rgba(23, 190, 187, 0.2);
 }
 
 /* ===================== GRID FRAMEWORK ===================== */
@@ -515,8 +515,8 @@ body {
 }
 
 .metric-card {
-    background-color: rgba(17, 24, 39, 0.5);
-    border: 1px solid #1f2937;
+    background-color: rgba(245, 245, 245, 0.5);
+    border: 1px solid #e5e5e5;
     border-radius: 12px;
     padding: 16px;
     transition: all 0.3s ease;
@@ -524,7 +524,7 @@ body {
 }
 
 .metric-card:hover {
-    border-color: rgba(45, 147, 173, 0.3);
+    border-color: rgba(23, 190, 187, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
 }
@@ -532,7 +532,7 @@ body {
 .metric-label {
     font-size: 12px;
     font-weight: 600;
-    color: #6b7280;
+    color: #0B3954;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -540,7 +540,7 @@ body {
 .metric-value-num {
     font-size: 24px;
     font-weight: 700;
-    color: #ffffff;
+    color: #1a1a1a;
     margin-top: 4px;
 }
 
@@ -553,24 +553,24 @@ body {
 .trend-up {
     font-size: 12px;
     font-weight: 500;
-    color: #2D93AD;
+    color: #17BEBB;
 }
 
 .trend-down {
     font-size: 12px;
     font-weight: 500;
-    color: #92140C;
+    color: #17BEBB;
 }
 
 .metric-subtext {
     font-size: 11px;
-    color: #6b7280;
+    color: #0B3954;
     margin-top: 8px;
 }
 
 .progress-bar-container {
     width: 100%;
-    background-color: #1f2937;
+    background-color: #e5e5e5;
     height: 6px;
     border-radius: 9999px;
     margin-top: 12px;
@@ -578,7 +578,7 @@ body {
 }
 
 .progress-bar-fill {
-    background: linear-gradient(to right, #2D93AD, #F3A712);
+    background: linear-gradient(to right, #17BEBB, #00A7E1);
     height: 100%;
     width: 78%;
     border-radius: 9999px;
@@ -592,8 +592,8 @@ body {
 
 /* ===================== RIGHT PANEL (LOG STREAM) ===================== */
 .right-panel {
-    background-color: rgba(17, 24, 39, 0.4);
-    border: 1px solid rgba(31, 41, 55, 0.8);
+    background-color: rgba(245, 245, 245, 0.4);
+    border: 1px solid rgba(200, 200, 200, 0.8);
     border-radius: 12px;
     padding: 20px;
     display: flex;
@@ -611,16 +611,16 @@ body {
 .panel-title {
     font-size: 14px;
     font-weight: 600;
-    color: #d1d5db;
+    color: #333333;
     letter-spacing: 0.02em;
 }
 
 .pulse-indicator {
     width: 8px;
     height: 8px;
-    background-color: #2D93AD;
+    background-color: #00A7E1;
     border-radius: 50%;
-    box-shadow: 0 0 8px #2D93AD;
+    box-shadow: 0 0 8px #00A7E1;
     animation: pulse 2s infinite;
 }
 
@@ -628,9 +628,9 @@ body {
 .log-stream {
     font-family: monospace;
     font-size: 12px;
-    color: #9ca3af;
+    color: #666666;
     background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(31, 41, 55, 0.5);
+    border: 1px solid rgba(200, 200, 200, 0.5);
     border-radius: 8px;
     padding: 16px;
     height: 192px;
@@ -645,14 +645,14 @@ body {
     margin-right: 4px;
 }
 
-.log-new { color: #2D93AD; }
-.log-processing { color: #F3A712; }
-.log-shipped { color: #4ade80; }
-.log-alert { color: #92140C; }
-.text-highlight { color: #F3A712; }
+.log-new { color: #17BEBB; }
+.log-processing { color: #00A7E1; }
+.log-shipped { color: #17BEBB; }
+.log-alert { color: #00A7E1; }
+.text-highlight { color: #17BEBB; }
 
 .log-listening {
-    color: #6b7280;
+    color: #0B3954;
     animation: pulse 1.5s infinite;
 }
 
@@ -661,17 +661,17 @@ body {
 }
 
 .log-stream::-webkit-scrollbar-track {
-    background: rgba(31, 41, 55, 0.3);
+    background: rgba(220, 220, 220, 0.3);
     border-radius: 3px;
 }
 
 .log-stream::-webkit-scrollbar-thumb {
-    background: rgba(45, 147, 173, 0.4);
+    background: rgba(23, 190, 187, 0.4);
     border-radius: 3px;
 }
 
 .log-stream::-webkit-scrollbar-thumb:hover {
-    background: rgba(45, 147, 173, 0.6);
+    background: rgba(23, 190, 187, 0.6);
 }
 
 /* ===================== FOOTER & BUTTONS ===================== */
@@ -679,14 +679,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(31, 41, 55, 0.6);
+    border-top: 1px solid rgba(200, 200, 200, 0.6);
     padding-top: 16px;
     margin-top: 16px;
 }
 
 .timestamp {
     font-size: 12px;
-    color: #6b7280;
+    color: #0B3954;
 }
 
 .action-btn {
@@ -700,15 +700,15 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #2D93AD, #1a7a8f);
-    color: #ffffff;
-    box-shadow: 0 4px 12px -2px rgba(45, 147, 173, 0.4);
+    background: linear-gradient(135deg, #17BEBB, #00A7E1);
+    color: #1a1a1a;
+    box-shadow: 0 4px 12px -2px rgba(23, 190, 187, 0.4);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #34a5bf, #208fa5);
+    background: linear-gradient(135deg, #00A7E1, #17BEBB);
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px -2px rgba(45, 147, 173, 0.5);
+    box-shadow: 0 6px 16px -2px rgba(0, 167, 225, 0.5);
 }
 
 /* ===================== ANIMATIONS ===================== */
@@ -741,11 +741,11 @@ body {
         top: 64px;
         left: 0;
         right: 0;
-        background: rgba(11, 15, 25, 0.95);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(16px);
         flex-direction: column;
         padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .nav-links.open {
