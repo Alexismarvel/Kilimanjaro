@@ -1,84 +1,84 @@
 // ===================== PRODUCT DATA =====================
 const products = [
     // ========== FASHION ==========
-    { id: 1, name: "Ankara Print Wrap Dress", category: "fashion", price: 12500, emoji: "👗", badge: "hot", rating: 4.8, reviews: 342 },
-    { id: 2, name: "Men's Agbada — White Gold", category: "fashion", price: 45000, oldPrice: 55000, emoji: "👔", badge: "sale", rating: 4.9, reviews: 189 },
-    { id: 3, name: "Ankara Crop Top", category: "fashion", price: 8500, emoji: "👚", badge: "new", rating: 4.5, reviews: 98 },
-    { id: 4, name: "Senator Wear — Navy Blue", category: "fashion", price: 28000, emoji: "👨‍💼", badge: "hot", rating: 4.7, reviews: 234 },
-    { id: 5, name: "Gele Head Wrap — Gold", category: "fashion", price: 4500, emoji: "👑", rating: 4.6, reviews: 156 },
-    { id: 6, name: "Adire Indigo Shirt", category: "fashion", price: 15000, emoji: "👕", badge: "new", rating: 4.8, reviews: 87 },
-    { id: 7, name: "Aso-Oke Woven Fabric", category: "fashion", price: 35000, oldPrice: 42000, emoji: "🧵", badge: "sale", rating: 4.9, reviews: 123 },
-    { id: 8, name: "Igbo Isiagu Top", category: "fashion", price: 18000, emoji: "🦁", badge: "hot", rating: 4.7, reviews: 167 },
+    { id: 1, name: "Ankara Print Wrap Dress", category: "fashion", price: 12500, emoji: "👗", image: "https://images.pexels.com/photos/33939066/pexels-photo-33939066.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.8, reviews: 342 },
+    { id: 2, name: "Men's Agbada — White Gold", category: "fashion", price: 45000, oldPrice: 55000, emoji: "👔", image: "https://images.pexels.com/photos/34821105/pexels-photo-34821105.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "sale", rating: 4.9, reviews: 189 },
+    { id: 3, name: "Ankara Crop Top", category: "fashion", price: 8500, emoji: "👚", image: "https://images.pexels.com/photos/18509401/pexels-photo-18509401.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.5, reviews: 98 },
+    { id: 4, name: "Senator Wear — Navy Blue", category: "fashion", price: 28000, emoji: "👨‍💼", image: "https://images.pexels.com/photos/28898725/pexels-photo-28898725.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.7, reviews: 234 },
+    { id: 5, name: "Gele Head Wrap — Gold", category: "fashion", price: 4500, emoji: "👑", image: "https://images.pexels.com/photos/20291783/pexels-photo-20291783.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.6, reviews: 156 },
+    { id: 6, name: "Adire Indigo Shirt", category: "fashion", price: 15000, emoji: "👕", image: "https://images.pexels.com/photos/17832815/pexels-photo-17832815.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.8, reviews: 87 },
+    { id: 7, name: "Aso-Oke Woven Fabric", category: "fashion", price: 35000, oldPrice: 42000, emoji: "🧵", image: "https://images.pexels.com/photos/30243795/pexels-photo-30243795.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "sale", rating: 4.9, reviews: 123 },
+    { id: 8, name: "Igbo Isiagu Top", category: "fashion", price: 18000, emoji: "🦁", image: "https://images.pexels.com/photos/10226305/pexels-photo-10226305.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.7, reviews: 167 },
 
     // ========== FOOD & GROCERIES ==========
-    { id: 9, name: "Premium Garri Ijebu — 5kg", category: "food", price: 3500, emoji: "🥘", badge: "hot", rating: 4.8, reviews: 567 },
-    { id: 10, name: "Fresh Plantain Chips — Spicy", category: "food", price: 1200, emoji: "🍌", badge: "new", rating: 4.6, reviews: 892 },
-    { id: 11, name: "Ground Cocoa Powder — 1kg", category: "food", price: 2800, emoji: "🍫", rating: 4.5, reviews: 345 },
-    { id: 12, name: "Nigerian Honey — Raw Unfiltered", category: "food", price: 4500, emoji: "🍯", badge: "hot", rating: 4.7, reviews: 234 },
-    { id: 13, name: "Smoked Dry Fish — Assorted", category: "food", price: 6500, oldPrice: 8000, emoji: "🐟", badge: "sale", rating: 4.8, reviews: 456 },
-    { id: 14, name: "Palm Oil — Fresh Red 5L", category: "food", price: 5500, emoji: "🫒", rating: 4.6, reviews: 678 },
-    { id: 15, name: "Ofada Rice — Premium 10kg", category: "food", price: 12000, emoji: "🍚", badge: "hot", rating: 4.9, reviews: 789 },
-    { id: 16, name: "Suya Spice Mix — 500g", category: "food", price: 1800, emoji: "🌶️", badge: "new", rating: 4.5, reviews: 345 },
+    { id: 9, name: "Premium Garri Ijebu — 5kg", category: "food", price: 3500, emoji: "🥘", image: "https://images.pexels.com/photos/6480227/pexels-photo-6480227.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.8, reviews: 567 },
+    { id: 10, name: "Fresh Plantain Chips — Spicy", category: "food", price: 1200, emoji: "🍌", image: "https://images.pexels.com/photos/17952745/pexels-photo-17952745.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.6, reviews: 892 },
+    { id: 11, name: "Ground Cocoa Powder — 1kg", category: "food", price: 2800, emoji: "🍫", image: "https://images.pexels.com/photos/691152/pexels-photo-691152.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 345 },
+    { id: 12, name: "Nigerian Honey — Raw Unfiltered", category: "food", price: 4500, emoji: "🍯", image: "https://images.pexels.com/photos/14525298/pexels-photo-14525298.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.7, reviews: 234 },
+    { id: 13, name: "Smoked Dry Fish — Assorted", category: "food", price: 6500, oldPrice: 8000, emoji: "🐟", image: "https://images.pexels.com/photos/36707708/pexels-photo-36707708.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "sale", rating: 4.8, reviews: 456 },
+    { id: 14, name: "Palm Oil — Fresh Red 5L", category: "food", price: 5500, emoji: "🫒", image: "https://images.pexels.com/photos/36707705/pexels-photo-36707705.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.6, reviews: 678 },
+    { id: 15, name: "Ofada Rice — Premium 10kg", category: "food", price: 12000, emoji: "🍚", image: "https://images.pexels.com/photos/36707710/pexels-photo-36707710.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.9, reviews: 789 },
+    { id: 16, name: "Suya Spice Mix — 500g", category: "food", price: 1800, emoji: "🌶️", image: "https://images.pexels.com/photos/36707704/pexels-photo-36707704.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.5, reviews: 345 },
 
     // ========== TECH & ELECTRONICS ==========
-    { id: 17, name: "Infinix Hot 40 Pro", category: "tech", price: 185000, oldPrice: 210000, emoji: "📱", badge: "hot", rating: 4.6, reviews: 1234 },
-    { id: 18, name: "Tecno Spark 20 Pro+", category: "tech", price: 145000, emoji: "📱", badge: "new", rating: 4.5, reviews: 892 },
-    { id: 19, name: "20000mAh Power Bank", category: "tech", price: 12000, emoji: "🔋", badge: "hot", rating: 4.7, reviews: 567 },
-    { id: 20, name: "Bluetooth Speaker — Portable", category: "tech", price: 18500, emoji: "🔊", rating: 4.6, reviews: 345 },
-    { id: 21, name: "Wireless Earbuds — Pro", category: "tech", price: 15000, oldPrice: 22000, emoji: "🎧", badge: "sale", rating: 4.8, reviews: 678 },
-    { id: 22, name: "HP Laptop — Intel Core i5", category: "tech", price: 485000, emoji: "💻", badge: "hot", rating: 4.9, reviews: 234 },
-    { id: 23, name: "Smart Watch — Fitness Track", category: "tech", price: 25000, emoji: "⌚", badge: "new", rating: 4.5, reviews: 189 },
-    { id: 24, name: "CCTV Camera — WiFi 360°", category: "tech", price: 32000, emoji: "📷", rating: 4.7, reviews: 123 },
+    { id: 17, name: "Infinix Hot 40 Pro", category: "tech", price: 185000, oldPrice: 210000, emoji: "📱", image: "https://images.pexels.com/photos/6804547/pexels-photo-6804547.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.6, reviews: 1234 },
+    { id: 18, name: "Tecno Spark 20 Pro+", category: "tech", price: 145000, emoji: "📱", image: "https://images.pexels.com/photos/6913227/pexels-photo-6913227.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.5, reviews: 892 },
+    { id: 19, name: "20000mAh Power Bank", category: "tech", price: 12000, emoji: "🔋", image: "https://images.pexels.com/photos/6296911/pexels-photo-6296911.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.7, reviews: 567 },
+    { id: 20, name: "Bluetooth Speaker — Portable", category: "tech", price: 18500, emoji: "🔊", image: "https://images.pexels.com/photos/4917455/pexels-photo-4917455.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.6, reviews: 345 },
+    { id: 21, name: "Wireless Earbuds — Pro", category: "tech", price: 15000, oldPrice: 22000, emoji: "🎧", image: "https://images.pexels.com/photos/19154544/pexels-photo-19154544.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "sale", rating: 4.8, reviews: 678 },
+    { id: 22, name: "HP Laptop — Intel Core i5", category: "tech", price: 485000, emoji: "💻", image: "https://images.pexels.com/photos/1028445/pexels-photo-1028445.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.9, reviews: 234 },
+    { id: 23, name: "Smart Watch — Fitness Track", category: "tech", price: 25000, emoji: "⌚", image: "https://images.pexels.com/photos/4379294/pexels-photo-4379294.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.5, reviews: 189 },
+    { id: 24, name: "CCTV Camera — WiFi 360°", category: "tech", price: 32000, emoji: "📷", image: "https://images.pexels.com/photos/321457/pexels-photo-321457.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.7, reviews: 123 },
 
     // ========== BEAUTY ==========
-    { id: 25, name: "Shea Butter — Organic Unrefined", category: "beauty", price: 3500, emoji: "🧴", badge: "hot", rating: 4.8, reviews: 892 },
-    { id: 26, name: "Black Soap — Ghanaian Pure", category: "beauty", price: 2200, emoji: "🧼", badge: "new", rating: 4.7, reviews: 567 },
-    { id: 27, name: "Coconut Hair Oil — 250ml", category: "beauty", price: 4500, emoji: "🥥", rating: 4.6, reviews: 345 },
-    { id: 28, name: "Face Glow Serum — Vitamin C", category: "beauty", price: 8500, emoji: "✨", badge: "hot", rating: 4.9, reviews: 234 },
-    { id: 29, name: "Argan Oil Shampoo — 400ml", category: "beauty", price: 5500, emoji: "🧴", rating: 4.5, reviews: 189 },
-    { id: 30, name: "Lip Gloss Set — 6 Colors", category: "beauty", price: 6500, oldPrice: 9000, emoji: "💄", badge: "sale", rating: 4.7, reviews: 456 },
-    { id: 31, name: "Body Lotion — Cocoa Butter", category: "beauty", price: 3200, emoji: "🧴", badge: "new", rating: 4.6, reviews: 678 },
-    { id: 32, name: "Perfume Oil — Oud & Amber", category: "beauty", price: 12000, emoji: "🌹", badge: "hot", rating: 4.8, reviews: 345 },
+    { id: 25, name: "Shea Butter — Organic Unrefined", category: "beauty", price: 3500, emoji: "🧴", image: "https://images.pexels.com/photos/35305097/pexels-photo-35305097.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.8, reviews: 892 },
+    { id: 26, name: "Black Soap — Ghanaian Pure", category: "beauty", price: 2200, emoji: "🧼", image: "https://images.pexels.com/photos/35305096/pexels-photo-35305096.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.7, reviews: 567 },
+    { id: 27, name: "Coconut Hair Oil — 250ml", category: "beauty", price: 4500, emoji: "🥥", image: "https://images.pexels.com/photos/4046314/pexels-photo-4046314.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.6, reviews: 345 },
+    { id: 28, name: "Face Glow Serum — Vitamin C", category: "beauty", price: 8500, emoji: "✨", image: "https://images.pexels.com/photos/5264269/pexels-photo-5264269.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.9, reviews: 234 },
+    { id: 29, name: "Argan Oil Shampoo — 400ml", category: "beauty", price: 5500, emoji: "🧴", image: "https://images.pexels.com/photos/5264272/pexels-photo-5264272.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 189 },
+    { id: 30, name: "Lip Gloss Set — 6 Colors", category: "beauty", price: 6500, oldPrice: 9000, emoji: "💄", image: "https://images.pexels.com/photos/26348192/pexels-photo-26348192.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "sale", rating: 4.7, reviews: 456 },
+    { id: 31, name: "Body Lotion — Cocoa Butter", category: "beauty", price: 3200, emoji: "🧴", image: "https://images.pexels.com/photos/6724434/pexels-photo-6724434.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.6, reviews: 678 },
+    { id: 32, name: "Perfume Oil — Oud & Amber", category: "beauty", price: 12000, emoji: "🌹", image: "https://images.pexels.com/photos/30770557/pexels-photo-30770557.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.8, reviews: 345 },
 
     // ========== HOME & LIVING ==========
-    { id: 33, name: "Adire Throw Pillow — Set of 2", category: "home", price: 15000, emoji: "🛋️", badge: "new", rating: 4.6, reviews: 234 },
-    { id: 34, name: "Brass Oil Lamp — Handcrafted", category: "home", price: 22000, emoji: "🪔", badge: "hot", rating: 4.8, reviews: 156 },
-    { id: 35, name: "Raffia Floor Mat — Large", category: "home", price: 18000, emoji: "🟫", rating: 4.5, reviews: 89 },
-    { id: 36, name: "Clay Water Pot — Traditional", category: "home", price: 8500, emoji: "🏺", badge: "new", rating: 4.7, reviews: 123 },
-    { id: 37, name: "Woven Basket Set — 3pc", category: "home", price: 12000, oldPrice: 16000, emoji: "🧺", badge: "sale", rating: 4.6, reviews: 189 },
-    { id: 38, name: "Carved Wooden Mask — Wall Art", category: "home", price: 28000, emoji: "🎭", badge: "hot", rating: 4.9, reviews: 67 },
-    { id: 39, name: "Copper Lantern — Solar Powered", category: "home", price: 15000, emoji: "🏮", rating: 4.5, reviews: 145 },
-    { id: 40, name: "Kente Table Runner", category: "home", price: 9500, emoji: "🪡", badge: "new", rating: 4.7, reviews: 98 },
+    { id: 33, name: "Adire Throw Pillow — Set of 2", category: "home", price: 15000, emoji: "🛋️", image: "https://images.pexels.com/photos/6843239/pexels-photo-6843239.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.6, reviews: 234 },
+    { id: 34, name: "Brass Oil Lamp — Handcrafted", category: "home", price: 22000, emoji: "🪔", image: "https://images.pexels.com/photos/32810686/pexels-photo-32810686.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.8, reviews: 156 },
+    { id: 35, name: "Raffia Floor Mat — Large", category: "home", price: 18000, emoji: "🟫", image: "https://images.pexels.com/photos/7640925/pexels-photo-7640925.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 89 },
+    { id: 36, name: "Clay Water Pot — Traditional", category: "home", price: 8500, emoji: "🏺", image: "https://images.pexels.com/photos/1854864/pexels-photo-1854864.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.7, reviews: 123 },
+    { id: 37, name: "Woven Basket Set — 3pc", category: "home", price: 12000, oldPrice: 16000, emoji: "🧺", image: "https://images.pexels.com/photos/4325439/pexels-photo-4325439.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "sale", rating: 4.6, reviews: 189 },
+    { id: 38, name: "Carved Wooden Mask — Wall Art", category: "home", price: 28000, emoji: "🎭", image: "https://images.pexels.com/photos/36338866/pexels-photo-36338866.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.9, reviews: 67 },
+    { id: 39, name: "Copper Lantern — Solar Powered", category: "home", price: 15000, emoji: "🏮", image: "https://images.pexels.com/photos/880864/pexels-photo-880864.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 145 },
+    { id: 40, name: "Kente Table Runner", category: "home", price: 9500, emoji: "🪡", image: "https://images.pexels.com/photos/3769398/pexels-photo-3769398.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.7, reviews: 98 },
 
     // ========== HEALTH ==========
-    { id: 41, name: "Bitter Leaf Capsules — 60pc", category: "health", price: 5500, emoji: "💊", badge: "hot", rating: 4.6, reviews: 345 },
-    { id: 42, name: "Moringa Powder — Organic 500g", category: "health", price: 4500, emoji: "🌿", badge: "new", rating: 4.7, reviews: 234 },
-    { id: 43, name: "Zobo Drink Mix — Hibiscus 1kg", category: "health", price: 2800, emoji: "🌺", rating: 4.8, reviews: 567 },
-    { id: 44, name: "Tiger Nut Milk Powder", category: "health", price: 3500, emoji: "🥛", badge: "hot", rating: 4.5, reviews: 189 },
-    { id: 45, name: "African Velvet Tamarind — 500g", category: "health", price: 2200, emoji: "🫒", rating: 4.6, reviews: 123 },
-    { id: 46, name: "Ginger & Garlic Tea — 30 bags", category: "health", price: 1800, emoji: "🍵", badge: "new", rating: 4.4, reviews: 89 },
-    { id: 47, name: "Baobab Fruit Powder — 300g", category: "health", price: 6500, emoji: "🌳", badge: "hot", rating: 4.8, reviews: 156 },
-    { id: 48, name: "Aloe Vera Gel — Pure 200ml", category: "health", price: 3200, emoji: "🌵", rating: 4.5, reviews: 234 },
+    { id: 41, name: "Bitter Leaf Capsules — 60pc", category: "health", price: 5500, emoji: "💊", image: "https://images.pexels.com/photos/1502311/pexels-photo-1502311.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.6, reviews: 345 },
+    { id: 42, name: "Moringa Powder — Organic 500g", category: "health", price: 4500, emoji: "🌿", image: "https://images.pexels.com/photos/16047702/pexels-photo-16047702.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.7, reviews: 234 },
+    { id: 43, name: "Zobo Drink Mix — Hibiscus 1kg", category: "health", price: 2800, emoji: "🌺", image: "https://images.pexels.com/photos/16236507/pexels-photo-16236507.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.8, reviews: 567 },
+    { id: 44, name: "Tiger Nut Milk Powder", category: "health", price: 3500, emoji: "🥛", image: "https://images.pexels.com/photos/28593042/pexels-photo-28593042.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.5, reviews: 189 },
+    { id: 45, name: "African Velvet Tamarind — 500g", category: "health", price: 2200, emoji: "🫒", image: "https://images.pexels.com/photos/5521702/pexels-photo-5521702.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.6, reviews: 123 },
+    { id: 46, name: "Ginger & Garlic Tea — 30 bags", category: "health", price: 1800, emoji: "🍵", image: "https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.4, reviews: 89 },
+    { id: 47, name: "Baobab Fruit Powder — 300g", category: "health", price: 6500, emoji: "🌳", image: "https://images.pexels.com/photos/1502311/pexels-photo-1502311.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.8, reviews: 156 },
+    { id: 48, name: "Aloe Vera Gel — Pure 200ml", category: "health", price: 3200, emoji: "🌵", image: "https://images.pexels.com/photos/4199098/pexels-photo-4199098.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 234 },
 
     // ========== GROCERIES ==========
-    { id: 49, name: "Indomie Instant Noodles — 40pk", category: "groceries", price: 8500, emoji: "🍜", badge: "hot", rating: 4.7, reviews: 1234 },
-    { id: 50, name: "Maggi Seasoning — 100 cubes", category: "groceries", price: 3200, emoji: "🧂", rating: 4.6, reviews: 892 },
-    { id: 51, name: "Nigeria Brown Beans — 5kg", category: "groceries", price: 6500, emoji: "🫘", badge: "new", rating: 4.5, reviews: 345 },
-    { id: 52, name: "Yam Flour (Elubo) — 2kg", category: "groceries", price: 4200, emoji: "🌾", rating: 4.7, reviews: 234 },
-    { id: 53, name: "Crayfish — Ground 1kg", category: "groceries", price: 5500, emoji: "🦐", badge: "hot", rating: 4.8, reviews: 567 },
-    { id: 54, name: "Cassava Flour — 3kg", category: "groceries", price: 3800, emoji: "🥔", rating: 4.5, reviews: 189 },
-    { id: 55, name: "Dried Pepper Mix — 500g", category: "groceries", price: 2500, emoji: "🌶️", badge: "new", rating: 4.6, reviews: 345 },
-    { id: 56, name: "Coconut — Fresh Brown 6pc", category: "groceries", price: 2000, emoji: "🥥", rating: 4.4, reviews: 678 },
+    { id: 49, name: "Indomie Instant Noodles — 40pk", category: "groceries", price: 8500, emoji: "🍜", image: "https://images.pexels.com/photos/1907228/pexels-photo-1907228.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.7, reviews: 1234 },
+    { id: 50, name: "Maggi Seasoning — 100 cubes", category: "groceries", price: 3200, emoji: "🧂", image: "https://images.pexels.com/photos/36707705/pexels-photo-36707705.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.6, reviews: 892 },
+    { id: 51, name: "Nigeria Brown Beans — 5kg", category: "groceries", price: 6500, emoji: "🫘", image: "https://images.pexels.com/photos/5665108/pexels-photo-5665108.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.5, reviews: 345 },
+    { id: 52, name: "Yam Flour (Elubo) — 2kg", category: "groceries", price: 4200, emoji: "🌾", image: "https://images.pexels.com/photos/7640758/pexels-photo-7640758.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.7, reviews: 234 },
+    { id: 53, name: "Crayfish — Ground 1kg", category: "groceries", price: 5500, emoji: "🦐", image: "https://images.pexels.com/photos/36707698/pexels-photo-36707698.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.8, reviews: 567 },
+    { id: 54, name: "Cassava Flour — 3kg", category: "groceries", price: 3800, emoji: "🥔", image: "https://images.pexels.com/photos/13006965/pexels-photo-13006965.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 189 },
+    { id: 55, name: "Dried Pepper Mix — 500g", category: "groceries", price: 2500, emoji: "🌶️", image: "https://images.pexels.com/photos/36707701/pexels-photo-36707701.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.6, reviews: 345 },
+    { id: 56, name: "Coconut — Fresh Brown 6pc", category: "groceries", price: 2000, emoji: "🥥", image: "https://images.pexels.com/photos/1030019/pexels-photo-1030019.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.4, reviews: 678 },
 
     // ========== SPORTS ==========
-    { id: 57, name: "Super Eagles Jersey — 2024", category: "sports", price: 25000, emoji: "⚽", badge: "hot", rating: 4.9, reviews: 892 },
-    { id: 58, name: "Adjustable Dumbbell Set", category: "sports", price: 85000, oldPrice: 110000, emoji: "🏋️", badge: "sale", rating: 4.8, reviews: 345 },
-    { id: 59, name: "Football — Size 5 Official", category: "sports", price: 8500, emoji: "⚽", badge: "new", rating: 4.6, reviews: 567 },
-    { id: 60, name: "Yoga Mat — Non-Slip 6mm", category: "sports", price: 12000, emoji: "🧘", rating: 4.5, reviews: 234 },
-    { id: 61, name: "Boxing Gloves — 12oz", category: "sports", price: 18000, emoji: "🥊", badge: "hot", rating: 4.7, reviews: 123 },
-    { id: 62, name: "Resistance Bands — 5pc Set", category: "sports", price: 7500, emoji: "💪", rating: 4.5, reviews: 189 },
-    { id: 63, name: "Skipping Rope — Speed", category: "sports", price: 3500, emoji: "🤸", badge: "new", rating: 4.4, reviews: 345 },
-    { id: 64, name: "Insulated Water Bottle — 1L", category: "sports", price: 6500, emoji: "🫗", rating: 4.6, reviews: 234 },
+    { id: 57, name: "Super Eagles Jersey — 2024", category: "sports", price: 25000, emoji: "⚽", image: "https://images.pexels.com/photos/30243795/pexels-photo-30243795.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.9, reviews: 892 },
+    { id: 58, name: "Adjustable Dumbbell Set", category: "sports", price: 85000, oldPrice: 110000, emoji: "🏋️", image: "https://images.pexels.com/photos/6546834/pexels-photo-6546834.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "sale", rating: 4.8, reviews: 345 },
+    { id: 59, name: "Football — Size 5 Official", category: "sports", price: 8500, emoji: "⚽", image: "https://images.pexels.com/photos/3747509/pexels-photo-3747509.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.6, reviews: 567 },
+    { id: 60, name: "Yoga Mat — Non-Slip 6mm", category: "sports", price: 12000, emoji: "🧘", image: "https://images.pexels.com/photos/6246682/pexels-photo-6246682.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 234 },
+    { id: 61, name: "Boxing Gloves — 12oz", category: "sports", price: 18000, emoji: "🥊", image: "https://images.pexels.com/photos/6339688/pexels-photo-6339688.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "hot", rating: 4.7, reviews: 123 },
+    { id: 62, name: "Resistance Bands — 5pc Set", category: "sports", price: 7500, emoji: "💪", image: "https://images.pexels.com/photos/6932262/pexels-photo-6932262.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.5, reviews: 189 },
+    { id: 63, name: "Skipping Rope — Speed", category: "sports", price: 3500, emoji: "🤸", image: "https://images.pexels.com/photos/4920436/pexels-photo-4920436.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", badge: "new", rating: 4.4, reviews: 345 },
+    { id: 64, name: "Insulated Water Bottle — 1L", category: "sports", price: 6500, emoji: "🫗", image: "https://images.pexels.com/photos/3270696/pexels-photo-3270696.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop", rating: 4.6, reviews: 234 },
 ];
 
 // ===================== STATE =====================
@@ -181,7 +181,7 @@ function renderProducts() {
                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         </svg>
                     </button>
-                    <span style="position:relative;z-index:1;">${p.emoji}</span>
+                    <span style="position:relative;z-index:1;">${p.image ? `<img src="${p.image}" alt="${p.name}" class="product-card-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;font-size:2.5rem;">${p.emoji}</span>` : `<span style="font-size:2.5rem;">${p.emoji}</span>`}</span>
                 </div>
                 <div class="product-card-body">
                     <p class="product-category">${p.category}</p>
@@ -385,7 +385,7 @@ function updateCartUI() {
             div.className = 'cart-item';
             div.dataset.id = item.id;
             div.innerHTML = `
-                <div class="cart-item-image">${item.emoji}</div>
+                <div class="cart-item-image">${item.image ? `<img src="${item.image}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);" onerror="this.parentElement.textContent='${item.emoji}'">` : item.emoji}</div>
                 <div class="cart-item-details">
                     <p class="cart-item-name">${item.name}</p>
                     <p class="cart-item-price">₦${(item.price * item.qty).toLocaleString()}</p>
@@ -490,7 +490,7 @@ function buildReceipt() {
     itemsEl.innerHTML = cart.map(item => `
         <div class="txn-receipt-item">
             <span class="txn-receipt-item-name">
-                <span class="txn-receipt-item-emoji">${item.emoji}</span>
+                <span class="txn-receipt-item-emoji">${item.image ? `<img src="${item.image}" alt="" style="width:20px;height:20px;border-radius:4px;object-fit:cover;vertical-align:middle;margin-right:4px;" onerror="this.outerHTML='${item.emoji}'">` : item.emoji}</span>
                 ${item.name}${item.qty > 1 ? ' x' + item.qty : ''}
             </span>
             <span>₦${(item.price * item.qty).toLocaleString()}</span>

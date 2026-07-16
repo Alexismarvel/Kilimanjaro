@@ -171,6 +171,23 @@ body {
     font-size: calc(14px * var(--font-scale));
 }
 
+/* ===================== COMPACT MODE ===================== */
+[data-compactMode] body {
+    --font-scale: 0.9;
+}
+
+[data-compactMode] .navbar-nav {
+    gap: 4px;
+}
+
+/* ===================== ANIMATIONS ===================== */
+html:not([data-animations]) *,
+html:not([data-animations]) *::before,
+html:not([data-animations]) *::after {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+}
+
 /* ===================== CUSTOMIZE BUTTON (FAB) ===================== */
 .customize-fab {
     position: fixed;
@@ -471,6 +488,79 @@ body {
     background-color: var(--bg-input);
     color: var(--text-primary);
     border-color: var(--border-input-hover);
+}
+
+/* ===================== DIVIDER ===================== */
+.customize-divider {
+    height: 1px;
+    background: var(--border-divider);
+    margin: 4px 0;
+}
+
+/* ===================== TOGGLE ROW ===================== */
+.customize-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.customize-toggle-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* ===================== SWITCH ===================== */
+.customize-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.customize-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.customize-slider {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-input);
+    border: 1px solid var(--border-strong);
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.customize-slider::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    bottom: 2px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.customize-switch input:checked + .customize-slider {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.customize-switch input:checked + .customize-slider::before {
+    background: #fff;
+    transform: translateX(18px);
+}
+
+.customize-switch input:focus-visible + .customize-slider {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 /* ===================== RESPONSIVE ===================== */

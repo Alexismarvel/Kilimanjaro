@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOBZ — Shop Quality Products</title>
+    <title>✨SHOBZ — Shop Quality Products</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home.css">
@@ -236,7 +236,7 @@
         </div>
         <div class="customize-panel-body">
             <div>
-                <p class="customize-section-label">Theme</p>
+                <p class="customize-section-label">Appearance</p>
                 <div class="customize-theme-toggle">
                     <button class="customize-theme-btn active" data-theme="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span>Light</span></button>
                     <button class="customize-theme-btn" data-theme="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span>Dark</span></button>
@@ -271,6 +271,53 @@
                     <button class="customize-fontsize-btn" data-fontsize="large"><span style="font-size:18px;">A</span></button>
                 </div>
             </div>
+
+            <div class="customize-divider"></div>
+
+            <div>
+                <p class="customize-section-label">General</p>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Compact Mode</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="compactMode"><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Animations</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="animations" checked><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Auto-save</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="autoSave" checked><span class="customize-slider"></span></label>
+                </div>
+            </div>
+
+            <div>
+                <p class="customize-section-label">Layout</p>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Show Sidebar</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="showSidebar" checked><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Grid View</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="gridView"><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Show Thumbnails</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="showThumbnails" checked><span class="customize-slider"></span></label>
+                </div>
+            </div>
+
+            <div>
+                <p class="customize-section-label">Notifications</p>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Enable Notifications</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="enableNotifications" checked><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Sound Effects</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="soundEffects"><span class="customize-slider"></span></label>
+                </div>
+            </div>
+
             <button class="customize-reset" id="customizeReset">Reset to Defaults</button>
         </div>
     </div>

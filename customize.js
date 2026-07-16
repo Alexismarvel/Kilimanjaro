@@ -1,3 +1,25 @@
+// ===================== CLICK SOUND =====================
+let _audioCtx = null;
+
+function playClickSound() {
+    if (!document.documentElement.hasAttribute('data-soundEffects')) return;
+    try {
+        if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = _audioCtx.createOscillator();
+        const gain = _audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(_audioCtx.destination);
+        osc.frequency.setValueAtTime(800, _audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(400, _audioCtx.currentTime + 0.05);
+        gain.gain.setValueAtTime(0.15, _audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, _audioCtx.currentTime + 0.08);
+        osc.start(_audioCtx.currentTime);
+        osc.stop(_audioCtx.currentTime + 0.08);
+    } catch (e) {}
+}
+
+document.addEventListener('click', playClickSound);
+
 // ===================== CUSTOMIZE PANEL =====================
 document.addEventListener('DOMContentLoaded', () => {
     loadPreferences();
@@ -8,7 +30,15 @@ const DEFAULTS = {
     theme: 'light',
     accent: 'teal',
     radius: 'rounded',
-    fontsize: 'default'
+    fontsize: 'default',
+    compactMode: false,
+    animations: true,
+    autoSave: true,
+    showSidebar: true,
+    gridView: false,
+    showThumbnails: true,
+    enableNotifications: true,
+    soundEffects: false
 };
 
 const ACCENT_MAP = {
@@ -34,6 +64,14 @@ function loadPreferences() {
     applyAccent(accent);
     applyRadius(radius);
     applyFontSize(fontsize);
+
+    // Load toggle settings
+    document.querySelectorAll('[data-setting]').forEach(toggle => {
+        const key = toggle.dataset.setting;
+        const val = saved[key] !== undefined ? saved[key] : DEFAULTS[key];
+        toggle.checked = val;
+        applySetting(key, val);
+    });
 }
 
 function savePreferences() {
@@ -43,6 +81,12 @@ function savePreferences() {
         radius: document.documentElement.getAttribute('data-radius') || DEFAULTS.radius,
         fontsize: document.documentElement.getAttribute('data-fontsize') || DEFAULTS.fontsize
     };
+
+    // Save toggle settings
+    document.querySelectorAll('[data-setting]').forEach(toggle => {
+        prefs[toggle.dataset.setting] = toggle.checked;
+    });
+
     localStorage.setItem('shobz customization', JSON.stringify(prefs));
 }
 
@@ -69,6 +113,14 @@ function applyRadius(radius) {
 function applyFontSize(fontsize) {
     document.documentElement.setAttribute('data-fontsize', fontsize);
     updateFontSizeButtons(fontsize);
+}
+
+function applySetting(key, value) {
+    if (value) {
+        document.documentElement.setAttribute(`data-${key}`, '');
+    } else {
+        document.documentElement.removeAttribute(`data-${key}`);
+    }
 }
 
 // ===================== UI UPDATES =====================
@@ -140,6 +192,14 @@ function initCustomizePanel() {
         });
     });
 
+    // Toggle settings
+    document.querySelectorAll('[data-setting]').forEach(toggle => {
+        toggle.addEventListener('change', () => {
+            applySetting(toggle.dataset.setting, toggle.checked);
+            savePreferences();
+        });
+    });
+
     // Reset
     if (resetBtn) {
         resetBtn.addEventListener('click', () => {
@@ -147,6 +207,14 @@ function initCustomizePanel() {
             applyAccent(DEFAULTS.accent);
             applyRadius(DEFAULTS.radius);
             applyFontSize(DEFAULTS.fontsize);
+
+            // Reset toggle settings
+            document.querySelectorAll('[data-setting]').forEach(toggle => {
+                const key = toggle.dataset.setting;
+                toggle.checked = DEFAULTS[key];
+                applySetting(key, DEFAULTS[key]);
+            });
+
             savePreferences();
         });
     }

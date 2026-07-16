@@ -70,6 +70,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 0.02em;
+    text-decoration: none;
 }
 
 .navbar .conveyor-belt {
@@ -343,6 +344,7 @@ body {
     align-items: center;
     gap: 12px;
     position: relative;
+    text-decoration: none;
 }
 
 .cart-icon {
@@ -368,6 +370,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 0.02em;
+    text-decoration: none;
 }
 
 /* Conveyor Belt */
