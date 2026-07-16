@@ -1,100 +1,84 @@
 // ===================== PRODUCT DATA =====================
 const products = [
-    // ========== ACCESSORIES ==========
-    { id: 1, name: "Leather Crossbody Bag", category: "accessories", price: 59.99, oldPrice: 79.99, emoji: "👜", badge: "sale", rating: 4.5, reviews: 128 },
-    { id: 2, name: "Classic Aviator Sunglasses", category: "accessories", price: 34.99, emoji: "🕶️", badge: "new", rating: 4.7, reviews: 95 },
-    { id: 3, name: "Minimalist Watch — Black", category: "accessories", price: 129.99, emoji: "⌚", badge: "hot", rating: 4.8, reviews: 312 },
-    { id: 4, name: "Gold Chain Necklace", category: "accessories", price: 44.99, emoji: "📿", rating: 4.3, reviews: 67 },
-    { id: 5, name: "Canvas Tote Bag", category: "accessories", price: 24.99, oldPrice: 32.99, emoji: "🎒", badge: "sale", rating: 4.2, reviews: 203 },
-    { id: 6, name: "Silk Scarf — Floral", category: "accessories", price: 19.99, emoji: "🧣", badge: "new", rating: 4.4, reviews: 41 },
-    { id: 7, name: "Buckle Leather Belt", category: "accessories", price: 29.99, emoji: "👔", rating: 4.6, reviews: 88 },
-    { id: 8, name: "Digital Smart Watch Pro", category: "accessories", price: 199.99, oldPrice: 249.99, emoji: "⌚", badge: "hot", rating: 4.9, reviews: 567 },
+    // ========== FASHION ==========
+    { id: 1, name: "Ankara Print Wrap Dress", category: "fashion", price: 12500, emoji: "👗", badge: "hot", rating: 4.8, reviews: 342 },
+    { id: 2, name: "Men's Agbada — White Gold", category: "fashion", price: 45000, oldPrice: 55000, emoji: "👔", badge: "sale", rating: 4.9, reviews: 189 },
+    { id: 3, name: "Ankara Crop Top", category: "fashion", price: 8500, emoji: "👚", badge: "new", rating: 4.5, reviews: 98 },
+    { id: 4, name: "Senator Wear — Navy Blue", category: "fashion", price: 28000, emoji: "👨‍💼", badge: "hot", rating: 4.7, reviews: 234 },
+    { id: 5, name: "Gele Head Wrap — Gold", category: "fashion", price: 4500, emoji: "👑", rating: 4.6, reviews: 156 },
+    { id: 6, name: "Adire Indigo Shirt", category: "fashion", price: 15000, emoji: "👕", badge: "new", rating: 4.8, reviews: 87 },
+    { id: 7, name: "Aso-Oke Woven Fabric", category: "fashion", price: 35000, oldPrice: 42000, emoji: "🧵", badge: "sale", rating: 4.9, reviews: 123 },
+    { id: 8, name: "Igbo Isiagu Top", category: "fashion", price: 18000, emoji: "🦁", badge: "hot", rating: 4.7, reviews: 167 },
 
     // ========== FOOD & GROCERIES ==========
-    { id: 9, name: "Organic Arabica Coffee Beans 1kg", category: "food", price: 18.99, emoji: "☕", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaSzjOOaHZxXnxJQSQQXvmdIBVgd3txK_Z4o4zwjnEhw&s=10", badge: "hot", rating: 4.8, reviews: 432 },
-    { id: 10, name: "Raw Wildflower Honey 500ml", category: "food", price: 14.99, emoji: "🍯", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnDEteWriPkzVnWauhx59LguehlZCh4NrHpsrz4v3ETw&s", badge: "new", rating: 4.7, reviews: 189 },
-    { id: 11, name: "Assorted Dry Fruits Mix 750g", category: "food", price: 22.99, emoji: "🥜", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9yuwGl8hojdWmUJbiuFrWTiVZK7dQC2qQ3-ngDqI0VA&s=10", rating: 4.5, reviews: 256 },
-    { id: 12, name: "Extra Virgin Olive Oil 1L", category: "food", price: 16.99, emoji: "🫒", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS3tmBmvEgKUAopQGTz40L8sGhCDET0Sz689U6GaipTQ&s=10", badge: "hot", rating: 4.6, reviews: 314 },
-    { id: 13, name: "Dark Chocolate Box — 12 Pieces", category: "food", price: 24.99, oldPrice: 29.99, emoji: "🍫", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXMkaLgGwLM90RDfPzZcX2UNAeEt_j8AUW-wu5kuZimw&s=10", badge: "sale", rating: 4.9, reviews: 198 },
-    { id: 14, name: "Himalayan Pink Salt 1kg", category: "food", price: 8.99, emoji: "🧂", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDz-ampMowyxsBdn2XDCFVl91juYjHxsCPrCYjhA2e3g&s=10", rating: 4.4, reviews: 167 },
-    { id: 15, name: "Green Tea Sampler Box", category: "food", price: 12.99, emoji: "🍵", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvJ8tSiP6xt5tF7Kd4_W8lS71xmhtaooHaDKLWrtmIIA&s", badge: "new", rating: 4.3, reviews: 91 },
-    { id: 16, name: "Protein Granola Bars — 12 Pack", category: "food", price: 19.99, emoji: "🍫", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj06ApqwpogVLgD6jDZoHPjBmzlKs0T4UVAT3gAl7x1g&s=10", rating: 4.5, reviews: 143 },
+    { id: 9, name: "Premium Garri Ijebu — 5kg", category: "food", price: 3500, emoji: "🥘", badge: "hot", rating: 4.8, reviews: 567 },
+    { id: 10, name: "Fresh Plantain Chips — Spicy", category: "food", price: 1200, emoji: "🍌", badge: "new", rating: 4.6, reviews: 892 },
+    { id: 11, name: "Ground Cocoa Powder — 1kg", category: "food", price: 2800, emoji: "🍫", rating: 4.5, reviews: 345 },
+    { id: 12, name: "Nigerian Honey — Raw Unfiltered", category: "food", price: 4500, emoji: "🍯", badge: "hot", rating: 4.7, reviews: 234 },
+    { id: 13, name: "Smoked Dry Fish — Assorted", category: "food", price: 6500, oldPrice: 8000, emoji: "🐟", badge: "sale", rating: 4.8, reviews: 456 },
+    { id: 14, name: "Palm Oil — Fresh Red 5L", category: "food", price: 5500, emoji: "🫒", rating: 4.6, reviews: 678 },
+    { id: 15, name: "Ofada Rice — Premium 10kg", category: "food", price: 12000, emoji: "🍚", badge: "hot", rating: 4.9, reviews: 789 },
+    { id: 16, name: "Suya Spice Mix — 500g", category: "food", price: 1800, emoji: "🌶️", badge: "new", rating: 4.5, reviews: 345 },
 
-    // ========== CLOTHING ==========
+    // ========== TECH & ELECTRONICS ==========
+    { id: 17, name: "Infinix Hot 40 Pro", category: "tech", price: 185000, oldPrice: 210000, emoji: "📱", badge: "hot", rating: 4.6, reviews: 1234 },
+    { id: 18, name: "Tecno Spark 20 Pro+", category: "tech", price: 145000, emoji: "📱", badge: "new", rating: 4.5, reviews: 892 },
+    { id: 19, name: "20000mAh Power Bank", category: "tech", price: 12000, emoji: "🔋", badge: "hot", rating: 4.7, reviews: 567 },
+    { id: 20, name: "Bluetooth Speaker — Portable", category: "tech", price: 18500, emoji: "🔊", rating: 4.6, reviews: 345 },
+    { id: 21, name: "Wireless Earbuds — Pro", category: "tech", price: 15000, oldPrice: 22000, emoji: "🎧", badge: "sale", rating: 4.8, reviews: 678 },
+    { id: 22, name: "HP Laptop — Intel Core i5", category: "tech", price: 485000, emoji: "💻", badge: "hot", rating: 4.9, reviews: 234 },
+    { id: 23, name: "Smart Watch — Fitness Track", category: "tech", price: 25000, emoji: "⌚", badge: "new", rating: 4.5, reviews: 189 },
+    { id: 24, name: "CCTV Camera — WiFi 360°", category: "tech", price: 32000, emoji: "📷", rating: 4.7, reviews: 123 },
 
-    { id: 21, name: "Canvas tote Bag", category: "clothing", price: 39.99, emoji: "👗", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhW1AVhj7BYJpFIrVv08XKDVW__pnTkUXX_c3EyG4GA&s", badge: "new", rating: 4.8, reviews: 95 },
-    { id: 22, name: "Silk Scarf- Floral", category: "clothing", price: 89.99, oldPrice: 109.99, emoji: "👟", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7546U_mkwyQjQTdIHv5XmWmKvgP_4knyhdC0Mgz3Zbw&s", badge: "sale", rating: 4.7, reviews: 342 },
-
-    { id: 73, name: "Black Gean Jacket", category: "clothing", price: 99.99, oldPrice: 129.99, emoji: "👢", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXo-DdPf5e7CQj7hkq2AOlk6yyv5L8Q3iqwcFcGSpu0g&s=10", badge: "sale", rating: 4.9, reviews: 445 },
-    { id: 74, name: "White Sneakers", category: "clothing", price: 27.99, emoji: "🩳", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2O40Hy1g5PjwaXhxMge1hq85tfO_cFx8f0eDbJ5J3WA&s", badge: "new", rating: 4.4, reviews: 201 },
-    { id: 75, name: "Graphic Printed Hoodie", category: "clothing", price: 59.99, emoji: "🦺", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM96Pupm9U6rxLD0EOfkaH1bCQ6atRTiiMEBbGNNNZtA&s=10", badge: "hot", rating: 4.6, reviews: 134 },
-    { id: 76, name: "White Pants", category: "clothing", price: 44.99, emoji: "👖", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnLzoHD_L8053UHkGsI8BsA6Oh1ITzftFELy_gvK2Rw&s=10", rating: 4.5, reviews: 89 },
-    { id: 77, name: "Floral- Summer Dress", category: "clothing", price: 36.99, emoji: "👔", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8BZQaJ7YnigM9hD3GTGiZC9WmE9ZvSRf72U62HluiQ&s=10", badge: "new", rating: 4.3, reviews: 223 },
-    { id: 78, name: "Running Shoes- Trailed Edition", category: "clothing", price: 109.99, emoji: "👢", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlfJ4sqZz81lzftuEBLRZg_5YGpF0REcLH_tHLMi9cyA&s=10", badge: "hot", rating: 4.8, reviews: 178 },
-    { id: 79, name: "Brown Jacket", category: "clothing", price: 22.99, emoji: "👕", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6v2rXcuc6MOiZfVT3sx4m5NUEWQINaAL8Owqu7qcJzQ&s=10", rating: 4.2, reviews: 345 },
-    { id: 80, name: "Graphic Printed T-Shirt", category: "clothing", price: 139.99, oldPrice: 169.99, emoji: "🧥", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSSYkM_gYy1f9ekxjkmFVxqQOg6Q0CpdZQ3smM16pgIw&s=10", badge: "sale", rating: 4.9, reviews: 567 },
-
-    { id: 85, name: "Wrap-Front Blouse", category: "clothing", price: 38.99, emoji: "👚", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhW1AVhj7BYJpFIrVv08XKDVW__pnTkUXX_c3EyG4GA&s", rating: 4.6, reviews: 143 },
-    { id: 86, name: "Waterproof Rain Parka", category: "clothing", price: 114.99, oldPrice: 144.99, emoji: "🧥", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7546U_mkwyQjQTdIHv5XmWmKvgP_4knyhdC0Mgz3Zbw&s", badge: "sale", rating: 4.8, reviews: 267 },
-
-    { id: 97, name: "Brushed Flannel Pajama Set", category: "clothing", price: 44.99, emoji: "🧵", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXo-DdPf5e7CQj7hkq2AOlk6yyv5L8Q3iqwcFcGSpu0g&s=10", badge: "new", rating: 4.6, reviews: 189 },
-    { id: 98, name: "Mesh-Panel Running Shorts", category: "clothing", price: 24.99, emoji: "🩳", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2O40Hy1g5PjwaXhxMge1hq85tfO_cFx8f0eDbJ5J3WA&s", rating: 4.3, reviews: 345 },
-    { id: 99, name: "Double-Breasted Blazer", category: "clothing", price: 99.99, oldPrice: 134.99, emoji: "🧥", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM96Pupm9U6rxLD0EOfkaH1bCQ6atRTiiMEBbGNNNZtA&s=10", badge: "sale", rating: 4.8, reviews: 167 },
-    { id: 100, name: "French Terry Hooded Sweatshirt", category: "clothing", price: 39.99, emoji: "👕", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnLzoHD_L8053UHkGsI8BsA6Oh1ITzftFELy_gvK2Rw&s=10", badge: "new", rating: 4.5, reviews: 423 },
-    { id: 101, name: "Patent Leather Loafers", category: "clothing", price: 79.99, emoji: "👞", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8BZQaJ7YnigM9hD3GTGiZC9WmE9ZvSRf72U62HluiQ&s=10", badge: "hot", rating: 4.7, reviews: 134 },
-    { id: 102, name: "Convertible Hiking pants", category: "clothing", price: 59.99, emoji: "👖", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlfJ4sqZz81lzftuEBLRZg_5YGpF0REcLH_tHLMi9cyA&s=10", rating: 4.6, reviews: 213 },
-    { id: 103, name: "Off-Shoulder Evening Top", category: "clothing", price: 36.99, emoji: "👚", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6v2rXcuc6MOiZfVT3sx4m5NUEWQINaAL8Owqu7qcJzQ&s=10", badge: "new", rating: 4.4, reviews: 98 },
-    { id: 104, name: "Waxed Canvas Field Jacket", category: "clothing", price: 129.99, oldPrice: 159.99, emoji: "🧥", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSSYkM_gYy1f9ekxjkmFVxqQOg6Q0CpdZQ3smM16pgIw&s=10", badge: "sale", rating: 4.9, reviews: 378 },
-
-    // ========== PHONES & TECH ==========
-    { id: 25, name: "Wireless Bluetooth Earbuds", category: "phones", price: 39.99, oldPrice: 59.99, emoji: "🎧", badge: "hot", rating: 4.6, reviews: 892 },
-    { id: 26, name: "20000mAh Power Bank", category: "phones", price: 29.99, emoji: "🔋", badge: "new", rating: 4.5, reviews: 567 },
-    { id: 27, name: "USB-C Fast Charging Cable 2m", category: "phones", price: 12.99, emoji: "🔌", rating: 4.4, reviews: 1234 },
-    { id: 28, name: "Bluetooth Portable Speaker", category: "phones", price: 49.99, emoji: "🔊", badge: "hot", rating: 4.7, reviews: 445 },
-    { id: 29, name: "Adjustable Laptop Stand", category: "phones", price: 34.99, emoji: "💻", badge: "new", rating: 4.6, reviews: 312 },
-    { id: 30, name: "Wireless Mouse — Ergonomic", category: "phones", price: 24.99, emoji: "🖱️", rating: 4.5, reviews: 278 },
-    { id: 31, name: "Mechanical Keyboard RGB", category: "phones", price: 69.99, oldPrice: 84.99, emoji: "⌨️", badge: "sale", rating: 4.8, reviews: 534 },
-    { id: 32, name: "Webcam HD 1080p", category: "phones", price: 44.99, emoji: "📷", rating: 4.3, reviews: 198 },
-
-    // ========== UTENSILS ==========
-    { id: 33, name: "Non-Stick Cookware Set — 8pc", category: "utensils", price: 89.99, oldPrice: 119.99, emoji: "🍳", badge: "sale", rating: 4.7, reviews: 345 },
-    { id: 34, name: "Stainless Steel Knife Set", category: "utensils", price: 54.99, emoji: "🔪", badge: "hot", rating: 4.8, reviews: 267 },
-    { id: 35, name: "Bamboo Cutting Board Set", category: "utensils", price: 29.99, emoji: "🪵", badge: "new", rating: 4.5, reviews: 189 },
-    { id: 36, name: "Ceramic Dinner Plate Set — 4pc", category: "utensils", price: 39.99, emoji: "🍽️", rating: 4.6, reviews: 156 },
-    { id: 37, name: "Glass Mixing Bowl Set", category: "utensils", price: 24.99, emoji: "🥣", rating: 4.4, reviews: 201 },
-    { id: 38, name: "Electric Kettle 1.7L", category: "utensils", price: 34.99, emoji: "🫖", badge: "hot", rating: 4.7, reviews: 432 },
-    { id: 39, name: "Silicone Spatula Set — 5pc", category: "utensils", price: 14.99, emoji: "🥄", rating: 4.3, reviews: 134 },
-    { id: 40, name: "French Press Coffee Maker", category: "utensils", price: 19.99, emoji: "☕", badge: "new", rating: 4.6, reviews: 287 },
-
-    // ========== PARTY & INSTRUMENTS ==========
-    { id: 41, name: "Bluetooth Karaoke Microphone", category: "party", price: 34.99, emoji: "🎤", badge: "hot", rating: 4.5, reviews: 456 },
-    { id: 42, name: "LED Strip Lights 10m — RGB", category: "party", price: 19.99, emoji: "💡", badge: "new", rating: 4.6, reviews: 678 },
-    { id: 43, name: "Acoustic Guitar — Beginner", category: "party", price: 89.99, emoji: "🎸", badge: "hot", rating: 4.7, reviews: 234 },
-    { id: 44, name: "Party Balloon Kit — 50pcs", category: "party", price: 14.99, emoji: "🎈", rating: 4.4, reviews: 312 },
-    { id: 45, name: "Electronic DJ Controller", category: "party", price: 149.99, oldPrice: 189.99, emoji: "🎛️", badge: "sale", rating: 4.8, reviews: 89 },
-    { id: 46, name: "Bongo Drums — Pair", category: "party", price: 39.99, emoji: "🪘", badge: "new", rating: 4.3, reviews: 67 },
-    { id: 47, name: "Disco Ball Motor with Mirror", category: "party", price: 24.99, emoji: "🪩", rating: 4.5, reviews: 198 },
-    { id: 48, name: "Keyboard Piano 61-Key", category: "party", price: 109.99, emoji: "🎹", badge: "hot", rating: 4.7, reviews: 345 },
+    // ========== BEAUTY ==========
+    { id: 25, name: "Shea Butter — Organic Unrefined", category: "beauty", price: 3500, emoji: "🧴", badge: "hot", rating: 4.8, reviews: 892 },
+    { id: 26, name: "Black Soap — Ghanaian Pure", category: "beauty", price: 2200, emoji: "🧼", badge: "new", rating: 4.7, reviews: 567 },
+    { id: 27, name: "Coconut Hair Oil — 250ml", category: "beauty", price: 4500, emoji: "🥥", rating: 4.6, reviews: 345 },
+    { id: 28, name: "Face Glow Serum — Vitamin C", category: "beauty", price: 8500, emoji: "✨", badge: "hot", rating: 4.9, reviews: 234 },
+    { id: 29, name: "Argan Oil Shampoo — 400ml", category: "beauty", price: 5500, emoji: "🧴", rating: 4.5, reviews: 189 },
+    { id: 30, name: "Lip Gloss Set — 6 Colors", category: "beauty", price: 6500, oldPrice: 9000, emoji: "💄", badge: "sale", rating: 4.7, reviews: 456 },
+    { id: 31, name: "Body Lotion — Cocoa Butter", category: "beauty", price: 3200, emoji: "🧴", badge: "new", rating: 4.6, reviews: 678 },
+    { id: 32, name: "Perfume Oil — Oud & Amber", category: "beauty", price: 12000, emoji: "🌹", badge: "hot", rating: 4.8, reviews: 345 },
 
     // ========== HOME & LIVING ==========
-    { id: 49, name: "Aroma Diffuser — Wood Grain", category: "home", price: 29.99, emoji: "🌿", badge: "new", rating: 4.6, reviews: 423 },
-    { id: 50, name: "Memory Foam Pillow — 2 Pack", category: "home", price: 39.99, emoji: "🛏️", badge: "hot", rating: 4.7, reviews: 567 },
-    { id: 51, name: "LED Desk Lamp — Dimmable", category: "home", price: 34.99, emoji: "💡", rating: 4.5, reviews: 234 },
-    { id: 52, name: "Scented Candle Set — 3pc", category: "home", price: 22.99, emoji: "🕯️", badge: "new", rating: 4.8, reviews: 345 },
-    { id: 53, name: "Microfiber Bath Towel Set", category: "home", price: 27.99, oldPrice: 34.99, emoji: "🛁", badge: "sale", rating: 4.4, reviews: 189 },
-    { id: 54, name: "Indoor Plant Pot — Ceramic", category: "home", price: 18.99, emoji: "🪴", rating: 4.5, reviews: 156 },
-    { id: 55, name: "Wall Clock — Minimalist", category: "home", price: 24.99, emoji: "🕰️", rating: 4.6, reviews: 98 },
-    { id: 56, name: "Robot Vacuum Cleaner", category: "home", price: 199.99, emoji: "🤖", badge: "hot", rating: 4.8, reviews: 678 },
+    { id: 33, name: "Adire Throw Pillow — Set of 2", category: "home", price: 15000, emoji: "🛋️", badge: "new", rating: 4.6, reviews: 234 },
+    { id: 34, name: "Brass Oil Lamp — Handcrafted", category: "home", price: 22000, emoji: "🪔", badge: "hot", rating: 4.8, reviews: 156 },
+    { id: 35, name: "Raffia Floor Mat — Large", category: "home", price: 18000, emoji: "🟫", rating: 4.5, reviews: 89 },
+    { id: 36, name: "Clay Water Pot — Traditional", category: "home", price: 8500, emoji: "🏺", badge: "new", rating: 4.7, reviews: 123 },
+    { id: 37, name: "Woven Basket Set — 3pc", category: "home", price: 12000, oldPrice: 16000, emoji: "🧺", badge: "sale", rating: 4.6, reviews: 189 },
+    { id: 38, name: "Carved Wooden Mask — Wall Art", category: "home", price: 28000, emoji: "🎭", badge: "hot", rating: 4.9, reviews: 67 },
+    { id: 39, name: "Copper Lantern — Solar Powered", category: "home", price: 15000, emoji: "🏮", rating: 4.5, reviews: 145 },
+    { id: 40, name: "Kente Table Runner", category: "home", price: 9500, emoji: "🪡", badge: "new", rating: 4.7, reviews: 98 },
 
-    // ========== SPORTS & FITNESS ==========
-    { id: 57, name: "Yoga Mat — Non-Slip 6mm", category: "sports", price: 24.99, emoji: "🧘", badge: "hot", rating: 4.7, reviews: 567 },
-    { id: 58, name: "Adjustable Dumbbell Set", category: "sports", price: 149.99, oldPrice: 189.99, emoji: "🏋️", badge: "sale", rating: 4.8, reviews: 345 },
-    { id: 59, name: "Insulated Water Bottle 1L", category: "sports", price: 19.99, emoji: "🫗", badge: "new", rating: 4.5, reviews: 789 },
-    { id: 60, name: "Resistance Bands Set — 5pc", category: "sports", price: 16.99, emoji: "💪", rating: 4.4, reviews: 432 },
-    { id: 61, name: "Running Armband — Universal", category: "sports", price: 12.99, emoji: "🏃", rating: 4.3, reviews: 234 },
-    { id: 62, name: "Boxing Gloves — 12oz", category: "sports", price: 44.99, emoji: "🥊", badge: "hot", rating: 4.6, reviews: 167 },
-    { id: 63, name: "Jump Rope — Speed Weighted", category: "sports", price: 9.99, emoji: "🤸", rating: 4.5, reviews: 345 },
-    { id: 64, name: "Foam Roller — Deep Tissue", category: "sports", price: 22.99, emoji: "🧘", badge: "new", rating: 4.7, reviews: 213 },
+    // ========== HEALTH ==========
+    { id: 41, name: "Bitter Leaf Capsules — 60pc", category: "health", price: 5500, emoji: "💊", badge: "hot", rating: 4.6, reviews: 345 },
+    { id: 42, name: "Moringa Powder — Organic 500g", category: "health", price: 4500, emoji: "🌿", badge: "new", rating: 4.7, reviews: 234 },
+    { id: 43, name: "Zobo Drink Mix — Hibiscus 1kg", category: "health", price: 2800, emoji: "🌺", rating: 4.8, reviews: 567 },
+    { id: 44, name: "Tiger Nut Milk Powder", category: "health", price: 3500, emoji: "🥛", badge: "hot", rating: 4.5, reviews: 189 },
+    { id: 45, name: "African Velvet Tamarind — 500g", category: "health", price: 2200, emoji: "🫒", rating: 4.6, reviews: 123 },
+    { id: 46, name: "Ginger & Garlic Tea — 30 bags", category: "health", price: 1800, emoji: "🍵", badge: "new", rating: 4.4, reviews: 89 },
+    { id: 47, name: "Baobab Fruit Powder — 300g", category: "health", price: 6500, emoji: "🌳", badge: "hot", rating: 4.8, reviews: 156 },
+    { id: 48, name: "Aloe Vera Gel — Pure 200ml", category: "health", price: 3200, emoji: "🌵", rating: 4.5, reviews: 234 },
+
+    // ========== GROCERIES ==========
+    { id: 49, name: "Indomie Instant Noodles — 40pk", category: "groceries", price: 8500, emoji: "🍜", badge: "hot", rating: 4.7, reviews: 1234 },
+    { id: 50, name: "Maggi Seasoning — 100 cubes", category: "groceries", price: 3200, emoji: "🧂", rating: 4.6, reviews: 892 },
+    { id: 51, name: "Nigeria Brown Beans — 5kg", category: "groceries", price: 6500, emoji: "🫘", badge: "new", rating: 4.5, reviews: 345 },
+    { id: 52, name: "Yam Flour (Elubo) — 2kg", category: "groceries", price: 4200, emoji: "🌾", rating: 4.7, reviews: 234 },
+    { id: 53, name: "Crayfish — Ground 1kg", category: "groceries", price: 5500, emoji: "🦐", badge: "hot", rating: 4.8, reviews: 567 },
+    { id: 54, name: "Cassava Flour — 3kg", category: "groceries", price: 3800, emoji: "🥔", rating: 4.5, reviews: 189 },
+    { id: 55, name: "Dried Pepper Mix — 500g", category: "groceries", price: 2500, emoji: "🌶️", badge: "new", rating: 4.6, reviews: 345 },
+    { id: 56, name: "Coconut — Fresh Brown 6pc", category: "groceries", price: 2000, emoji: "🥥", rating: 4.4, reviews: 678 },
+
+    // ========== SPORTS ==========
+    { id: 57, name: "Super Eagles Jersey — 2024", category: "sports", price: 25000, emoji: "⚽", badge: "hot", rating: 4.9, reviews: 892 },
+    { id: 58, name: "Adjustable Dumbbell Set", category: "sports", price: 85000, oldPrice: 110000, emoji: "🏋️", badge: "sale", rating: 4.8, reviews: 345 },
+    { id: 59, name: "Football — Size 5 Official", category: "sports", price: 8500, emoji: "⚽", badge: "new", rating: 4.6, reviews: 567 },
+    { id: 60, name: "Yoga Mat — Non-Slip 6mm", category: "sports", price: 12000, emoji: "🧘", rating: 4.5, reviews: 234 },
+    { id: 61, name: "Boxing Gloves — 12oz", category: "sports", price: 18000, emoji: "🥊", badge: "hot", rating: 4.7, reviews: 123 },
+    { id: 62, name: "Resistance Bands — 5pc Set", category: "sports", price: 7500, emoji: "💪", rating: 4.5, reviews: 189 },
+    { id: 63, name: "Skipping Rope — Speed", category: "sports", price: 3500, emoji: "🤸", badge: "new", rating: 4.4, reviews: 345 },
+    { id: 64, name: "Insulated Water Bottle — 1L", category: "sports", price: 6500, emoji: "🫗", rating: 4.6, reviews: 234 },
 ];
 
 // ===================== STATE =====================
@@ -106,6 +90,7 @@ let wishlist = new Set();
 
 // ===================== INIT =====================
 document.addEventListener('DOMContentLoaded', () => {
+    handleUrlParams();
     renderProducts();
     initFilters();
     initSort();
@@ -113,6 +98,26 @@ document.addEventListener('DOMContentLoaded', () => {
     initCart();
     initNavbar();
 });
+
+// ===================== URL PARAMS =====================
+function handleUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    const query = params.get('q');
+
+    if (category) {
+        currentCategory = category;
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.toggle('active', b.dataset.category === category);
+        });
+    }
+
+    if (query) {
+        searchQuery = query;
+        const navInput = document.getElementById('navSearchInput');
+        if (navInput) navInput.value = query;
+    }
+}
 
 // ===================== RENDER PRODUCTS =====================
 function renderProducts() {
@@ -155,7 +160,7 @@ function renderProducts() {
             : '';
 
         const oldPriceHTML = p.oldPrice
-            ? `<span class="product-price-old">$${p.oldPrice.toFixed(2)}</span>`
+            ? `<span class="product-price-old">₦${p.oldPrice.toLocaleString()}</span>`
             : '';
 
         const inCart = cart.find(c => c.id === p.id);
@@ -176,10 +181,10 @@ function renderProducts() {
                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         </svg>
                     </button>
-                    ${p.image ? `<img src="${p.image}" alt="${p.name}" class="product-img">` : `<span style="position:relative;z-index:1;">${p.emoji}</span>`}
+                    <span style="position:relative;z-index:1;">${p.emoji}</span>
                 </div>
                 <div class="product-card-body">
-                    <p class="product-category">${p.category.replace('-', ' & ')}</p>
+                    <p class="product-category">${p.category}</p>
                     <h3 class="product-name">${p.name}</h3>
                     <div class="product-rating">
                         <div class="stars">${starsHTML}</div>
@@ -187,7 +192,7 @@ function renderProducts() {
                     </div>
                     <div class="product-price-row">
                         <div>
-                            <span class="product-price">$${p.price.toFixed(2)}</span>
+                            <span class="product-price">₦${p.price.toLocaleString()}</span>
                             ${oldPriceHTML}
                         </div>
                         <button class="${btnClass}" onclick="addToCart(${p.id})" title="Add to cart">
@@ -359,33 +364,31 @@ function updateCartUI() {
     if (cart.length === 0) {
         emptyMsg.style.display = 'flex';
         footer.style.display = 'none';
-        // Remove cart item elements but keep empty msg
         itemsContainer.querySelectorAll('.cart-item').forEach(el => el.remove());
         return;
     }
 
     emptyMsg.style.display = 'none';
     footer.style.display = 'block';
-    subtotalEl.textContent = `$${totalPrice.toFixed(2)}`;
-    totalEl.textContent = `$${totalPrice.toFixed(2)}`;
+    subtotalEl.textContent = `₦${totalPrice.toLocaleString()}`;
+    totalEl.textContent = `₦${totalPrice.toLocaleString()}`;
 
-    // Render items
     const existingIDs = new Set();
     cart.forEach(item => {
         existingIDs.add(item.id);
         let el = itemsContainer.querySelector(`.cart-item[data-id="${item.id}"]`);
         if (el) {
             el.querySelector('.cart-item-qty').textContent = item.qty;
-            el.querySelector('.cart-item-price').textContent = `$${(item.price * item.qty).toFixed(2)}`;
+            el.querySelector('.cart-item-price').textContent = `₦${(item.price * item.qty).toLocaleString()}`;
         } else {
             const div = document.createElement('div');
             div.className = 'cart-item';
             div.dataset.id = item.id;
             div.innerHTML = `
-                <div class="cart-item-image">${item.image ? `<img src="${item.image}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">` : item.emoji}</div>
+                <div class="cart-item-image">${item.emoji}</div>
                 <div class="cart-item-details">
                     <p class="cart-item-name">${item.name}</p>
-                    <p class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</p>
+                    <p class="cart-item-price">₦${(item.price * item.qty).toLocaleString()}</p>
                     <div class="cart-item-controls">
                         <button class="qty-btn" onclick="changeQty(${item.id}, -1)">−</button>
                         <span class="cart-item-qty">${item.qty}</span>
@@ -403,7 +406,6 @@ function updateCartUI() {
         }
     });
 
-    // Remove items not in cart
     itemsContainer.querySelectorAll('.cart-item').forEach(el => {
         if (!existingIDs.has(parseInt(el.dataset.id))) {
             el.remove();
@@ -430,6 +432,84 @@ function showToast(message) {
         toast.classList.add('toast-out');
         setTimeout(() => toast.remove(), 300);
     }, 2200);
+}
+
+// ===================== TRANSACTION SIMULATION =====================
+function startTransaction() {
+    if (cart.length === 0) return;
+
+    closeCart();
+
+    const overlay = document.getElementById('txnOverlay');
+    const modal = document.getElementById('txnModal');
+    const step1 = document.getElementById('txnStep1');
+    const step2 = document.getElementById('txnStep2');
+    const step3 = document.getElementById('txnStep3');
+
+    step1.style.display = '';
+    step2.style.display = 'none';
+    step3.style.display = 'none';
+    document.getElementById('txnProgress1').style.width = '0%';
+    document.getElementById('txnProgress2').style.width = '0%';
+
+    overlay.classList.add('open');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+        document.getElementById('txnProgress1').style.width = '100%';
+    }, 100);
+
+    setTimeout(() => {
+        step1.style.display = 'none';
+        step2.style.display = '';
+        setTimeout(() => {
+            document.getElementById('txnProgress2').style.width = '100%';
+        }, 100);
+    }, 1800);
+
+    setTimeout(() => {
+        step2.style.display = 'none';
+        step3.style.display = '';
+        buildReceipt();
+    }, 3400);
+}
+
+function buildReceipt() {
+    const total = cart.reduce((sum, c) => sum + c.price * c.qty, 0);
+    const orderId = 'SHZ-' + Math.floor(1000 + Math.random() * 9000);
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-NG', { year: 'numeric', month: 'short', day: 'numeric' });
+    const timeStr = now.toLocaleTimeString('en-NG', { hour: '2-digit', minute: '2-digit' });
+
+    document.getElementById('txnOrderId').textContent = '#' + orderId;
+    document.getElementById('txnReceiptTotal').textContent = '₦' + total.toLocaleString();
+    document.getElementById('txnDate').textContent = dateStr + ' at ' + timeStr;
+
+    const itemsEl = document.getElementById('txnReceiptItems');
+    itemsEl.innerHTML = cart.map(item => `
+        <div class="txn-receipt-item">
+            <span class="txn-receipt-item-name">
+                <span class="txn-receipt-item-emoji">${item.emoji}</span>
+                ${item.name}${item.qty > 1 ? ' x' + item.qty : ''}
+            </span>
+            <span>₦${(item.price * item.qty).toLocaleString()}</span>
+        </div>
+    `).join('');
+}
+
+function closeTransaction() {
+    const overlay = document.getElementById('txnOverlay');
+    const modal = document.getElementById('txnModal');
+
+    overlay.classList.remove('open');
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+
+    cart = [];
+    updateCartUI();
+    renderProducts();
+    showToast('Order placed successfully!');
 }
 
 // ===================== NAVBAR (shared) =====================
@@ -459,86 +539,4 @@ function initNavbar() {
             navLinks?.classList.remove('open');
         }
     });
-}
-
-// ===================== TRANSACTION SIMULATION =====================
-function startTransaction() {
-    if (cart.length === 0) return;
-
-    closeCart();
-
-    const overlay = document.getElementById('txnOverlay');
-    const modal = document.getElementById('txnModal');
-    const step1 = document.getElementById('txnStep1');
-    const step2 = document.getElementById('txnStep2');
-    const step3 = document.getElementById('txnStep3');
-
-    // Reset
-    step1.style.display = '';
-    step2.style.display = 'none';
-    step3.style.display = 'none';
-    document.getElementById('txnProgress1').style.width = '0%';
-    document.getElementById('txnProgress2').style.width = '0%';
-
-    overlay.classList.add('open');
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-
-    // Step 1: Processing
-    setTimeout(() => {
-        document.getElementById('txnProgress1').style.width = '100%';
-    }, 100);
-
-    setTimeout(() => {
-        step1.style.display = 'none';
-        step2.style.display = '';
-        setTimeout(() => {
-            document.getElementById('txnProgress2').style.width = '100%';
-        }, 100);
-    }, 1800);
-
-    // Step 2: Confirming → Step 3: Receipt
-    setTimeout(() => {
-        step2.style.display = 'none';
-        step3.style.display = '';
-        buildReceipt();
-    }, 3400);
-}
-
-function buildReceipt() {
-    const total = cart.reduce((sum, c) => sum + c.price * c.qty, 0);
-    const orderId = 'KIL-' + Math.floor(1000 + Math.random() * 9000);
-    const now = new Date();
-    const dateStr = now.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-
-    document.getElementById('txnOrderId').textContent = '#' + orderId;
-    document.getElementById('txnReceiptTotal').textContent = '$' + total.toFixed(2);
-    document.getElementById('txnDate').textContent = dateStr + ' at ' + timeStr;
-
-    const itemsEl = document.getElementById('txnReceiptItems');
-    itemsEl.innerHTML = cart.map(item => `
-        <div class="txn-receipt-item">
-            <span class="txn-receipt-item-name">
-                <span class="txn-receipt-item-emoji">${item.emoji}</span>
-                ${item.name}${item.qty > 1 ? ' x' + item.qty : ''}
-            </span>
-            <span>$${(item.price * item.qty).toFixed(2)}</span>
-        </div>
-    `).join('');
-}
-
-function closeTransaction() {
-    const overlay = document.getElementById('txnOverlay');
-    const modal = document.getElementById('txnModal');
-
-    overlay.classList.remove('open');
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-
-    // Clear cart after successful transaction
-    cart = [];
-    updateCartUI();
-    renderProducts();
-    showToast('Order placed successfully!');
 }

@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===================== FEATURED PRODUCTS =====================
 const homeProducts = [
-    { id: 3, name: "Minimalist Watch — Black", category: "accessories", price: 129.99, emoji: "⌚", badge: "hot", rating: 4.8, reviews: 312 },
-    { id: 9, name: "Organic Arabica Coffee Beans 1kg", category: "food", price: 18.99, emoji: "☕", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaSzjOOaHZxXnxJQSQQXvmdIBVgd3txK_Z4o4zwjnEhw&s=10", badge: "hot", rating: 4.8, reviews: 432 },
-    { id: 73, name: "Black Denim Jacket", category: "clothing", price: 99.99, oldPrice: 129.99, emoji: "👢", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXo-DdPf5e7CQj7hkq2AOlk6yyv5L8Q3iqwcFcGSpu0g&s=10", badge: "sale", rating: 4.9, reviews: 445 },
-    { id: 25, name: "Wireless Bluetooth Earbuds", category: "phones", price: 39.99, oldPrice: 59.99, emoji: "🎧", badge: "hot", rating: 4.6, reviews: 892 },
-    { id: 33, name: "Non-Stick Cookware Set — 8pc", category: "utensils", price: 89.99, oldPrice: 119.99, emoji: "🍳", badge: "sale", rating: 4.7, reviews: 345 },
-    { id: 43, name: "Acoustic Guitar — Beginner", category: "party", price: 89.99, emoji: "🎸", badge: "hot", rating: 4.7, reviews: 234 },
-    { id: 56, name: "Robot Vacuum Cleaner", category: "home", price: 199.99, emoji: "🤖", badge: "hot", rating: 4.8, reviews: 678 },
-    { id: 57, name: "Yoga Mat — Non-Slip 6mm", category: "sports", price: 24.99, emoji: "🧘", badge: "hot", rating: 4.7, reviews: 567 },
+    { id: 2, name: "Men's Agbada — White Gold", category: "fashion", price: 45000, oldPrice: 55000, emoji: "👔", badge: "hot", rating: 4.9, reviews: 189 },
+    { id: 15, name: "Ofada Rice — Premium 10kg", category: "food", price: 12000, emoji: "🍚", badge: "hot", rating: 4.9, reviews: 789 },
+    { id: 17, name: "Infinix Hot 40 Pro", category: "tech", price: 185000, oldPrice: 210000, emoji: "📱", badge: "hot", rating: 4.6, reviews: 1234 },
+    { id: 25, name: "Shea Butter — Organic Unrefined", category: "beauty", price: 3500, emoji: "🧴", badge: "hot", rating: 4.8, reviews: 892 },
+    { id: 38, name: "Carved Wooden Mask — Wall Art", category: "home", price: 28000, emoji: "🎭", badge: "hot", rating: 4.9, reviews: 67 },
+    { id: 43, name: "Zobo Drink Mix — Hibiscus 1kg", category: "health", price: 2800, emoji: "🌺", badge: "new", rating: 4.8, reviews: 567 },
+    { id: 49, name: "Indomie Instant Noodles — 40pk", category: "groceries", price: 8500, emoji: "🍜", badge: "hot", rating: 4.7, reviews: 1234 },
+    { id: 57, name: "Super Eagles Jersey — 2024", category: "sports", price: 25000, emoji: "⚽", badge: "hot", rating: 4.9, reviews: 892 },
 ];
 
 function renderFeaturedProducts() {
@@ -35,20 +35,20 @@ function renderFeaturedProducts() {
             : '';
 
         const oldPriceHTML = p.oldPrice
-            ? `<span class="home-product-old-price">$${p.oldPrice.toFixed(2)}</span>`
+            ? `<span class="home-product-old-price">₦${p.oldPrice.toLocaleString()}</span>`
             : '';
 
         return `
             <a href="products.html" class="home-product-card">
                 <div class="home-product-image">
                     ${badgeHTML}
-                    ${p.image ? `<img src="${p.image}" alt="${p.name}">` : `<span>${p.emoji}</span>`}
+                    <span>${p.emoji}</span>
                 </div>
                 <div class="home-product-body">
-                    <p class="home-product-category">${p.category.replace('-', ' & ')}</p>
+                    <p class="home-product-category">${p.category}</p>
                     <h3 class="home-product-name">${p.name}</h3>
                     <div>
-                        <span class="home-product-price">$${p.price.toFixed(2)}</span>
+                        <span class="home-product-price">₦${p.price.toLocaleString()}</span>
                         ${oldPriceHTML}
                     </div>
                     <div class="home-product-rating">

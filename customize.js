@@ -24,7 +24,7 @@ const ACCENT_MAP = {
 
 // ===================== LOAD SAVED PREFERENCES =====================
 function loadPreferences() {
-    const saved = JSON.parse(localStorage.getItem('kj customization') || '{}');
+    const saved = JSON.parse(localStorage.getItem('shobz customization') || '{}');
     const theme = saved.theme || DEFAULTS.theme;
     const accent = saved.accent || DEFAULTS.accent;
     const radius = saved.radius || DEFAULTS.radius;
@@ -43,7 +43,7 @@ function savePreferences() {
         radius: document.documentElement.getAttribute('data-radius') || DEFAULTS.radius,
         fontsize: document.documentElement.getAttribute('data-fontsize') || DEFAULTS.fontsize
     };
-    localStorage.setItem('kj customization', JSON.stringify(prefs));
+    localStorage.setItem('shobz customization', JSON.stringify(prefs));
 }
 
 // ===================== APPLY FUNCTIONS =====================
