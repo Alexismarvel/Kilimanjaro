@@ -1,0 +1,159 @@
+/* ===================== ORDERS HERO ===================== */
+.orders-hero {
+    position: relative;
+    width: 100%;
+    padding: 60px 24px 40px;
+    text-align: center;
+    overflow: hidden;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-default);
+}
+
+.orders-hero-glow {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.orders-hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #17BEBB, #00A7E1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.orders-hero-subtitle {
+    font-size: 15px;
+    color: var(--accent-text);
+}
+
+/* ===================== ORDERS CONTAINER ===================== */
+.orders-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+}
+
+/* ===================== ORDERS FILTERS ===================== */
+.orders-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.orders-filters .filter-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-default);
+    background: var(--bg-card);
+    color: var(--accent-text);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.orders-filters .filter-btn.active,
+.orders-filters .filter-btn:hover {
+    background: var(--accent-primary);
+    color: #fff;
+    border-color: var(--accent-primary);
+}
+
+/* ===================== ORDERS TABLE ===================== */
+.orders-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    background: var(--bg-card);
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.orders-table thead {
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-default);
+}
+
+.orders-table th {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent-text);
+}
+
+.orders-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-default);
+    color: var(--text-primary);
+}
+
+.orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tbody tr:hover {
+    background: var(--bg-surface);
+}
+
+.order-id {
+    font-weight: 600;
+    color: var(--accent-primary);
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: rgba(255, 193, 7, 0.15);
+    color: #e6a800;
+}
+
+.status-processing {
+    background: rgba(0, 119, 182, 0.15);
+    color: #0077B6;
+}
+
+.status-shipped {
+    background: rgba(45, 106, 79, 0.15);
+    color: #2D6A4F;
+}
+
+.status-delivered {
+    background: rgba(23, 190, 187, 0.15);
+    color: #17BEBB;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .orders-table th,
+    .orders-table td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .orders-hero-title {
+        font-size: 28px;
+    }
+}

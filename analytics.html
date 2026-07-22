@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨Shop — SHOBZ</title>
+    <title>✨Analytics — SHOBZ</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="analytics.css">
     <link rel="stylesheet" href="customize.css">
 </head>
 <body>
@@ -36,8 +36,10 @@
 
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="products.html" class="nav-link active">Shop</a></li>
+                <li><a href="products.html" class="nav-link">Shop</a></li>
                 <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="orders.html" class="nav-link">Orders</a></li>
+                <li><a href="analytics.html" class="nav-link active">Analytics</a></li>
             </ul>
 
             <div class="nav-right">
@@ -46,7 +48,7 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" placeholder="Search..." id="navSearchInput">
+                    <input type="text" placeholder="Search analytics...">
                 </div>
                 <div class="nav-icons">
                     <button class="nav-icon-btn" id="notifBtn">
@@ -56,13 +58,13 @@
                         </svg>
                         <span class="notif-dot"></span>
                     </button>
-                    <button class="nav-icon-btn cart-nav-btn" id="cartToggle">
+                    <button class="nav-icon-btn cart-nav-btn">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="9" cy="21" r="1"></circle>
                             <circle cx="20" cy="21" r="1"></circle>
                             <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                         </svg>
-                        <span class="cart-count" id="cartCountNav">0</span>
+                        <span class="cart-count">3</span>
                     </button>
                     <div class="user-avatar">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -80,155 +82,116 @@
         </div>
     </nav>
 
-    <!-- ============ HERO SECTION ============ -->
-    <section class="shop-hero">
-        <div class="shop-hero-glow glow-hero-left"></div>
-        <div class="shop-hero-glow glow-hero-right"></div>
-        <div class="shop-hero-content">
-            <h1 class="shop-hero-title">Shop Our Collection</h1>
-            <p class="shop-hero-subtitle">Authentic Nigerian products — from fashion to groceries</p>
+    <!-- ============ ANALYTICS PAGE ============ -->
+    <section class="analytics-hero">
+        <div class="analytics-hero-glow glow-hero-left"></div>
+        <div class="analytics-hero-glow glow-hero-right"></div>
+        <div class="analytics-hero-content">
+            <h1 class="analytics-hero-title">Analytics</h1>
+            <p class="analytics-hero-subtitle">Insights and performance metrics for your store</p>
         </div>
     </section>
 
-    <!-- ============ MAIN SHOP CONTENT ============ -->
-    <main class="shop-container">
-
-        <!-- Category Filter Bar -->
-        <div class="filter-bar">
-            <button class="filter-btn active" data-category="all">All Products</button>
-            <button class="filter-btn" data-category="fashion">Fashion</button>
-            <button class="filter-btn" data-category="food">Food & Spices</button>
-            <button class="filter-btn" data-category="tech">Phones & Tech</button>
-            <button class="filter-btn" data-category="beauty">Beauty</button>
-            <button class="filter-btn" data-category="home">Home & Living</button>
-            <button class="filter-btn" data-category="health">Health</button>
-            <button class="filter-btn" data-category="groceries">Groceries</button>
-            <button class="filter-btn" data-category="sports">Sports & Fitness</button>
-        </div>
-
-        <!-- Results Bar -->
-        <div class="results-bar">
-            <p class="results-count"><span id="productCount">0</span> products found</p>
-            <div class="sort-control">
-                <label for="sortSelect">Sort by:</label>
-                <select id="sortSelect">
-                    <option value="featured">Featured</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
-                    <option value="name-az">Name: A-Z</option>
-                    <option value="rating">Top Rated</option>
-                </select>
+    <main class="analytics-container">
+        <div class="analytics-grid">
+            <div class="analytics-card">
+                <p class="analytics-card-label">Total Revenue</p>
+                <p class="analytics-card-value">&#8358;12,485,200</p>
+                <span class="trend-up">&#8593; 18.2% vs last month</span>
+            </div>
+            <div class="analytics-card">
+                <p class="analytics-card-label">Total Orders</p>
+                <p class="analytics-card-value">1,247</p>
+                <span class="trend-up">&#8593; 8.5% vs last month</span>
+            </div>
+            <div class="analytics-card">
+                <p class="analytics-card-label">Avg. Order Value</p>
+                <p class="analytics-card-value">&#8358;10,012</p>
+                <span class="trend-down">&#8595; 1.2% vs last month</span>
+            </div>
+            <div class="analytics-card">
+                <p class="analytics-card-label">Conversion Rate</p>
+                <p class="analytics-card-value">4.8%</p>
+                <span class="trend-up">&#8593; 0.6% vs last month</span>
             </div>
         </div>
 
-        <!-- Product Grid -->
-        <div class="product-grid" id="productGrid">
-            <!-- Products injected by JS -->
-        </div>
+        <div class="analytics-chart-section">
+            <div class="analytics-chart-card">
+                <div class="analytics-chart-header">
+                    <h3>Revenue Over Time</h3>
+                    <div class="analytics-chart-legend">
+                        <span class="legend-dot" style="background:#17BEBB;"></span> Revenue
+                    </div>
+                </div>
+                <div class="analytics-chart-body" id="revenueChart">
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height:45%;"><span class="chart-bar-label">&#8358;1.2M</span></div>
+                        <span class="chart-month">Jan</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height:62%;"><span class="chart-bar-label">&#8358;1.6M</span></div>
+                        <span class="chart-month">Feb</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height:55%;"><span class="chart-bar-label">&#8358;1.5M</span></div>
+                        <span class="chart-month">Mar</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height:70%;"><span class="chart-bar-label">&#8358;1.8M</span></div>
+                        <span class="chart-month">Apr</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height:80%;"><span class="chart-bar-label">&#8358;2.1M</span></div>
+                        <span class="chart-month">May</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height:75%;"><span class="chart-bar-label">&#8358;2.0M</span></div>
+                        <span class="chart-month">Jun</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height:92%;"><span class="chart-bar-label">&#8358;2.4M</span></div>
+                        <span class="chart-month">Jul</span>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Empty State -->
-        <div class="empty-state" id="emptyState" style="display:none;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <p>No products found matching your search.</p>
-            <button class="action-btn btn-primary" id="clearSearchBtn">Clear Filters</button>
+            <div class="analytics-chart-card">
+                <div class="analytics-chart-header">
+                    <h3>Top Categories</h3>
+                </div>
+                <div class="analytics-categories">
+                    <div class="category-stat">
+                        <span class="category-name">Fashion</span>
+                        <div class="category-bar-bg"><div class="category-bar-fill" style="width:85%;"></div></div>
+                        <span class="category-pct">35%</span>
+                    </div>
+                    <div class="category-stat">
+                        <span class="category-name">Phones & Tech</span>
+                        <div class="category-bar-bg"><div class="category-bar-fill" style="width:65%;"></div></div>
+                        <span class="category-pct">28%</span>
+                    </div>
+                    <div class="category-stat">
+                        <span class="category-name">Food & Spices</span>
+                        <div class="category-bar-bg"><div class="category-bar-fill" style="width:48%;"></div></div>
+                        <span class="category-pct">18%</span>
+                    </div>
+                    <div class="category-stat">
+                        <span class="category-name">Beauty</span>
+                        <div class="category-bar-bg"><div class="category-bar-fill" style="width:30%;"></div></div>
+                        <span class="category-pct">12%</span>
+                    </div>
+                    <div class="category-stat">
+                        <span class="category-name">Others</span>
+                        <div class="category-bar-bg"><div class="category-bar-fill" style="width:17%;"></div></div>
+                        <span class="category-pct">7%</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </main>
 
-    <!-- ============ CART SIDEBAR ============ -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <aside class="cart-sidebar" id="cartSidebar">
-        <div class="cart-sidebar-header">
-            <h3>Your Cart</h3>
-            <button class="cart-close" id="cartClose">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <div class="cart-empty" id="cartEmpty">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="9" cy="21" r="1"></circle>
-                    <circle cx="20" cy="21" r="1"></circle>
-                    <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-                <p>Your cart is empty</p>
-            </div>
-        </div>
-        <div class="cart-sidebar-footer" id="cartFooter" style="display:none;">
-            <div class="cart-total-row">
-                <span>Subtotal</span>
-                <span id="cartSubtotal">₦0</span>
-            </div>
-            <div class="cart-total-row cart-total-final">
-                <span>Total</span>
-                <span id="cartTotal">₦0</span>
-            </div>
-            <button class="action-btn btn-primary btn-checkout">Proceed to Checkout</button>
-            <button class="action-btn btn-outline btn-continue" id="continueShopping">Continue Shopping</button>
-        </div>
-    </aside>
-
-    <!-- ============ TRANSACTION MODAL ============ -->
-    <div class="txn-overlay" id="txnOverlay"></div>
-    <div class="txn-modal" id="txnModal">
-        <div class="txn-content" id="txnContent">
-            <!-- Step 1: Processing -->
-            <div class="txn-step" id="txnStep1">
-                <div class="txn-spinner"></div>
-                <h3 class="txn-title">Processing Payment</h3>
-                <p class="txn-text">Verifying your order details...</p>
-                <div class="txn-progress">
-                    <div class="txn-progress-bar" id="txnProgress1"></div>
-                </div>
-            </div>
-            <!-- Step 2: Confirming -->
-            <div class="txn-step" id="txnStep2" style="display:none;">
-                <div class="txn-spinner"></div>
-                <h3 class="txn-title">Confirming Transaction</h3>
-                <p class="txn-text">Connecting to payment gateway...</p>
-                <div class="txn-progress">
-                    <div class="txn-progress-bar" id="txnProgress2"></div>
-                </div>
-            </div>
-            <!-- Step 3: Receipt -->
-            <div class="txn-step" id="txnStep3" style="display:none;">
-                <div class="txn-receipt-icon">
-                    <svg viewBox="0 0 52 52" fill="none">
-                        <circle cx="26" cy="26" r="25" stroke="#0B3954" stroke-width="2"/>
-                        <path class="txn-check" d="M14 27l7 7 16-16" stroke="#0B3954" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h3 class="txn-title txn-success-title">Payment Successful</h3>
-                <div class="txn-receipt">
-                    <div class="txn-receipt-row txn-receipt-header">
-                        <span>Order Receipt</span>
-                        <span id="txnOrderId">#SHZ-0000</span>
-                    </div>
-                    <div class="txn-receipt-items" id="txnReceiptItems"></div>
-                    <div class="txn-receipt-row txn-receipt-total">
-                        <span>Total Paid</span>
-                        <span id="txnReceiptTotal">₦0</span>
-                    </div>
-                    <div class="txn-receipt-row txn-receipt-date">
-                        <span id="txnDate"></span>
-                    </div>
-                </div>
-                <button class="action-btn btn-primary txn-done-btn" id="txnDoneBtn">Done</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============ TOAST ============ -->
-    <div class="toast-container" id="toastContainer"></div>
-
     <script src="script.js"></script>
-    <script src="products.js"></script>
     <script src="customize.js"></script>
     <!-- ============ CUSTOMIZE PANEL ============ -->
     <button class="customize-fab" id="customizeFab">

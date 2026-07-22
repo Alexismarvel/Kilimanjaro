@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨SHOBZ — Shop Quality Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="customize.css">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="conveyor-belt">
+                    <div class="belt-track"></div>
+                    <div class="belt-rollers">
+                        <div class="roller"></div>
+                        <div class="roller"></div>
+                        <div class="roller"></div>
+                        <div class="roller"></div>
+                    </div>
+                </div>
+                <div class="cart-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </div>
+                <span class="brand-name">SHOBZ</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="products.html" class="nav-link">Shop</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="orders.html" class="nav-link">Orders</a></li>
+                <li><a href="analytics.html" class="nav-link">Analytics</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="nav-search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search products..." id="homeSearchInput">
+                </div>
+                <div class="nav-icons">
+                    <button class="nav-icon-btn" id="notifBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notif-dot"></span>
+                    </button>
+                    <div class="user-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="home-hero">
+        <div class="home-hero-glow home-glow-left"></div>
+        <div class="home-hero-glow home-glow-right"></div>
+        <div class="home-emoji-bg">
+            <span class="emoji-float" style="--x:8%;--y:15%;--dur:6s;--delay:0s;--size:38px;">🛒</span>
+            <span class="emoji-float" style="--x:20%;--y:70%;--dur:7s;--delay:1s;--size:32px;">👔</span>
+            <span class="emoji-float" style="--x:35%;--y:25%;--dur:5.5s;--delay:0.5s;--size:36px;">📱</span>
+            <span class="emoji-float" style="--x:50%;--y:80%;--dur:8s;--delay:2s;--size:30px;">🍚</span>
+            <span class="emoji-float" style="--x:65%;--y:18%;--dur:6.5s;--delay:1.5s;--size:34px;">⚽</span>
+            <span class="emoji-float" style="--x:78%;--y:65%;--dur:7.5s;--delay:0.8s;--size:40px;">🎧</span>
+            <span class="emoji-float" style="--x:90%;--y:30%;--dur:5s;--delay:2.5s;--size:28px;">🧴</span>
+            <span class="emoji-float" style="--x:12%;--y:45%;--dur:9s;--delay:3s;--size:26px;">🍜</span>
+            <span class="emoji-float" style="--x:42%;--y:10%;--dur:7s;--delay:1.2s;--size:32px;">🎭</span>
+            <span class="emoji-float" style="--x:55%;--y:50%;--dur:6s;--delay:0.3s;--size:30px;">🌶️</span>
+            <span class="emoji-float" style="--x:72%;--y:85%;--dur:8s;--delay:2.2s;--size:34px;">🌿</span>
+            <span class="emoji-float" style="--x:85%;--y:12%;--dur:5.5s;--delay:1.8s;--size:28px;">💻</span>
+            <span class="emoji-float" style="--x:28%;--y:88%;--dur:7s;--delay:0.6s;--size:36px;">🧣</span>
+            <span class="emoji-float" style="--x:95%;--y:55%;--dur:6.5s;--delay:3.5s;--size:32px;">👑</span>
+            <span class="emoji-float" style="--x:5%;--y:90%;--dur:8s;--delay:1s;--size:30px;">🫘</span>
+        </div>
+        <div class="home-hero-content">
+            <p class="home-hero-tag">Welcome to SHOBZ</p>
+            <h1 class="home-hero-title">Nigeria's Market-place for Quality Products</h1>
+            <p class="home-hero-subtitle">From ankara fashion to premium groceries, tech gadgets to indigenous beauty — shop authentic Nigerian products at the best prices.</p>
+            <div class="home-hero-actions">
+                <a href="products.html" class="action-btn btn-primary home-cta" title="Go into our large  collection of items">Browse SHOBZ</a>
+                <a href="#categories" class="action-btn btn-outline home-cta-outline">Explore Categories</a>
+            </div>
+            <div class="home-hero-stats">
+                <div class="home-stat">
+                    <span class="home-stat-num">64+</span>
+                    <span class="home-stat-label">Products</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-num">9</span>
+                    <span class="home-stat-label">Categories</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-num">4.7</span>
+                    <span class="home-stat-label">Avg. Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CATEGORIES SECTION ============ -->
+    <section class="home-section" id="categories">
+        <div class="home-container">
+            <div class="home-section-header">
+                <h2 class="home-section-title">Shop by Category</h2>
+                <p class="home-section-subtitle">Find exactly what you need across our curated collections</p>
+            </div>
+            <div class="home-categories-grid">
+                <a href="products.html?category=fashion" class="home-category-card">
+                    <span class="home-category-emoji">👔</span>
+                    <h3 class="home-category-name">Fashion</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=food" class="home-category-card">
+                    <span class="home-category-emoji">🍚</span>
+                    <h3 class="home-category-name">Food & Spices</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=tech" class="home-category-card">
+                    <span class="home-category-emoji">📱</span>
+                    <h3 class="home-category-name">Phones & Tech</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=beauty" class="home-category-card">
+                    <span class="home-category-emoji">🧴</span>
+                    <h3 class="home-category-name">Beauty</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=home" class="home-category-card">
+                    <span class="home-category-emoji">🎭</span>
+                    <h3 class="home-category-name">Home & Living</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=health" class="home-category-card">
+                    <span class="home-category-emoji">🌿</span>
+                    <h3 class="home-category-name">Health & Wellness</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=groceries" class="home-category-card">
+                    <span class="home-category-emoji">🍜</span>
+                    <h3 class="home-category-name">Groceries</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+                <a href="products.html?category=sports" class="home-category-card">
+                    <span class="home-category-emoji">⚽</span>
+                    <h3 class="home-category-name">Sports & Fitness</h3>
+                    <p class="home-category-count">8 products</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURED PRODUCTS SECTION ============ -->
+    <section class="home-section home-section-alt" id="featured">
+        <div class="home-container">
+            <div class="home-section-header">
+                <h2 class="home-section-title">Featured Products</h2>
+                <p class="home-section-subtitle">Handpicked top sellers loved by our customers</p>
+            </div>
+            <div class="home-featured-grid" id="featuredGrid">
+                <!-- Injected by JS -->
+            </div>
+            <div class="home-featured-cta">
+                <a href="products.html" class="action-btn btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="home-footer">
+        <div class="home-container">
+            <div class="home-footer-grid">
+                <div class="home-footer-brand">
+                    <span class="brand-name">SHOBZ</span>
+                    <p class="home-footer-desc">Authentic Nigerian products curated for every lifestyle. Shop with confidence.</p>
+                </div>
+                <div class="home-footer-links">
+                    <h4>Shop</h4>
+                    <a href="products.html">All Products</a>
+                    <a href="products.html?category=fashion">Fashion</a>
+                    <a href="products.html?category=tech">Tech</a>
+                    <a href="products.html?category=groceries">Groceries</a>
+                </div>
+                <div class="home-footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="dashboard.html">Dashboard</a>
+                </div>
+                <div class="home-footer-links">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Shipping</a>
+                </div>
+            </div>
+            <div class="home-footer-bottom">
+                <p>&copy; 2026 SHOBZ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+    <script src="customize.js"></script>
+    <!-- ============ CUSTOMIZE PANEL ============ -->
+    <button class="customize-fab" id="customizeFab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+    </button>
+    <div class="customize-overlay" id="customizeOverlay"></div>
+    <div class="customize-panel" id="customizePanel">
+        <div class="customize-panel-header">
+            <h3>Customize</h3>
+            <button class="customize-close" id="customizeClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div class="customize-panel-body">
+            <div>
+                <p class="customize-section-label">Appearance</p>
+                <div class="customize-theme-toggle">
+                    <button class="customize-theme-btn active" data-theme="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span>Light</span></button>
+                    <button class="customize-theme-btn" data-theme="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span>Dark</span></button>
+                </div>
+            </div>
+            <div>
+                <p class="customize-section-label">Accent Color</p>
+                <div class="customize-swatches">
+                    <button class="customize-swatch active" data-accent="teal" style="background:#0B3954;" title="Teal"></button>
+                    <button class="customize-swatch" data-accent="ocean" style="background:#0077B6;" title="Ocean"></button>
+                    <button class="customize-swatch" data-accent="emerald" style="background:#2D6A4F;" title="Emerald"></button>
+                    <button class="customize-swatch" data-accent="violet" style="background:#5A189A;" title="Violet"></button>
+                    <button class="customize-swatch" data-accent="rose" style="background:#9B2226;" title="Rose"></button>
+                    <button class="customize-swatch" data-accent="amber" style="background:#BC6C25;" title="Amber"></button>
+                    <button class="customize-swatch" data-accent="slate" style="background:#495057;" title="Slate"></button>
+                    <button class="customize-swatch" data-accent="brand" style="background:#17BEBB;" title="Brand"></button>
+                </div>
+            </div>
+            <div>
+                <p class="customize-section-label">Border Radius</p>
+                <div class="customize-radius-options">
+                    <button class="customize-radius-btn" data-radius="sharp"><div class="customize-radius-preview" style="border-radius:2px;"></div><span>Sharp</span></button>
+                    <button class="customize-radius-btn active" data-radius="rounded"><div class="customize-radius-preview" style="border-radius:8px;"></div><span>Rounded</span></button>
+                    <button class="customize-radius-btn" data-radius="pill"><div class="customize-radius-preview" style="border-radius:16px;"></div><span>Pill</span></button>
+                </div>
+            </div>
+            <div>
+                <p class="customize-section-label">Font Size</p>
+                <div class="customize-fontsize-options">
+                    <button class="customize-fontsize-btn" data-fontsize="small"><span>A</span></button>
+                    <button class="customize-fontsize-btn active" data-fontsize="default"><span style="font-size:14px;">A</span></button>
+                    <button class="customize-fontsize-btn" data-fontsize="large"><span style="font-size:18px;">A</span></button>
+                </div>
+            </div>
+
+            <div class="customize-divider"></div>
+
+            <div>
+                <p class="customize-section-label">General</p>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Compact Mode</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="compactMode"><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Animations</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="animations" checked><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Auto-save</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="autoSave" checked><span class="customize-slider"></span></label>
+                </div>
+            </div>
+
+            <div>
+                <p class="customize-section-label">Layout</p>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Show Sidebar</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="showSidebar" checked><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Grid View</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="gridView"><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Show Thumbnails</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="showThumbnails" checked><span class="customize-slider"></span></label>
+                </div>
+            </div>
+
+            <div>
+                <p class="customize-section-label">Notifications</p>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Enable Notifications</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="enableNotifications" checked><span class="customize-slider"></span></label>
+                </div>
+                <div class="customize-toggle-row">
+                    <span class="customize-toggle-label">Sound Effects</span>
+                    <label class="customize-switch"><input type="checkbox" data-setting="soundEffects"><span class="customize-slider"></span></label>
+                </div>
+            </div>
+
+            <button class="customize-reset" id="customizeReset">Reset to Defaults</button>
+        </div>
+    </div>
+</body>
+</html>

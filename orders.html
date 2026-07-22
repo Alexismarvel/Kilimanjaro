@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨SHOBZ — Manager Dashboard</title>
+    <title>✨Orders — SHOBZ</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="orders.css">
     <link rel="stylesheet" href="customize.css">
 </head>
 <body>
@@ -36,9 +37,9 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="products.html" class="nav-link">Shop</a></li>
-                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
-                <li><a href="#" class="nav-link">Orders</a></li>
-                <li><a href="#" class="nav-link">Analytics</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="orders.html" class="nav-link active">Orders</a></li>
+                <li><a href="analytics.html" class="nav-link">Analytics</a></li>
             </ul>
 
             <div class="nav-right">
@@ -47,7 +48,7 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Search orders...">
                 </div>
                 <div class="nav-icons">
                     <button class="nav-icon-btn" id="notifBtn">
@@ -81,86 +82,101 @@
         </div>
     </nav>
 
-    <!-- ============ DASHBOARD PANEL ============ -->
-    <div class="glass-panel">
-        
-        <div class="glow glow-top-left"></div>
-        <div class="glow glow-bottom-right"></div>
+    <!-- ============ ORDERS PAGE ============ -->
+    <section class="orders-hero">
+        <div class="orders-hero-glow glow-hero-left"></div>
+        <div class="orders-hero-glow glow-hero-right"></div>
+        <div class="orders-hero-content">
+            <h1 class="orders-hero-title">Orders</h1>
+            <p class="orders-hero-subtitle">Track and manage all customer orders</p>
+        </div>
+    </section>
 
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <span class="status-badge">Status: Active</span>
-                <span class="last-sync">Last synced: <span id="lastSync">just now</span></span>
-            </div>
-            <div class="top-bar-right">
-                <button class="action-btn btn-outline">Export</button>
-                <button class="action-btn btn-primary">+ New Product</button>
-            </div>
+    <main class="orders-container">
+        <div class="orders-filters">
+            <button class="filter-btn active" data-status="all">All Orders</button>
+            <button class="filter-btn" data-status="pending">Pending</button>
+            <button class="filter-btn" data-status="processing">Processing</button>
+            <button class="filter-btn" data-status="shipped">Shipped</button>
+            <button class="filter-btn" data-status="delivered">Delivered</button>
         </div>
 
-        <div class="dashboard-grid">
-            
-            <div class="left-panel">
-                <div class="metric-card">
-                    <p class="metric-label">Total Revenue</p>
-                    <div class="metric-flex">
-                        <p class="metric-value-num">₦12,485,200</p>
-                        <span class="trend-up">↑ 18.2%</span>
-                    </div>
-                </div>
-                
-                <div class="metric-card">
-                    <p class="metric-label">Active Orders</p>
-                    <div class="metric-flex">
-                        <p class="metric-value-num">1,247</p>
-                        <span class="trend-up">↑ 8.5%</span>
-                    </div>
-                </div>
-
-                <div class="metric-card">
-                    <p class="metric-label">Products Listed</p>
-                    <p class="metric-value-num">3,842</p>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar-fill"></div>
-                    </div>
-                    <p class="metric-subtext">78% catalog capacity</p>
-                </div>
-
-                <div class="metric-card">
-                    <p class="metric-label">Conversion Rate</p>
-                    <div class="metric-flex">
-                        <p class="metric-value-num">4.8%</p>
-                        <span class="trend-down">↓ 1.2%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-panel">
-                <div class="panel-header">
-                    <h3 class="panel-title">Live Order Feed</h3>
-                    <span class="pulse-indicator"></span>
-                </div>
-                
-                <div class="log-stream" id="orderFeed">
-                    <p><span class="log-tag log-new">[NEW]</span> Order #8847 — Men's Agbada — <span class="text-highlight">₦45,000</span></p>
-                    <p><span class="log-tag log-processing">[PROCESS]</span> Payment confirmed for Order #8842</p>
-                    <p><span class="log-tag log-shipped">[SHIPPED]</span> Dispatched to Lagos — Tracking: <span class="text-highlight">GRB-928374</span></p>
-                    <p><span class="log-tag log-new">[NEW]</span> Order #8846 — Ofada Rice x2 — <span class="text-highlight">₦24,000</span></p>
-                    <p><span class="log-tag log-alert">[ALERT]</span> Low stock: Ankara Print Wrap Dress (5 remaining)</p>
-                    <p><span class="log-tag log-processing">[PROCESS]</span> Fulfillment started: Order #8839</p>
-                    <p class="log-listening">&gt; Monitoring incoming orders...</p>
-                </div>
-
-                <div class="panel-footer">
-                    <span class="timestamp">Updated <span id="timeAgo">just now</span></span>
-                    <button class="action-btn btn-primary">View All Orders</button>
-                </div>
-            </div>
-
+        <div class="orders-table-wrap">
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTableBody">
+                    <tr>
+                        <td class="order-id">#SHZ-8847</td>
+                        <td>Adaeze Okonkwo</td>
+                        <td>Men's Agbada</td>
+                        <td>&#8358;45,000</td>
+                        <td>Jul 18, 2026</td>
+                        <td><span class="status-badge status-pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#SHZ-8846</td>
+                        <td>Chukwuemeka Nna</td>
+                        <td>Ofada Rice x2</td>
+                        <td>&#8358;24,000</td>
+                        <td>Jul 18, 2026</td>
+                        <td><span class="status-badge status-processing">Processing</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#SHZ-8842</td>
+                        <td>Fatima Bello</td>
+                        <td>Ankara Print Wrap Dress</td>
+                        <td>&#8358;18,500</td>
+                        <td>Jul 17, 2026</td>
+                        <td><span class="status-badge status-shipped">Shipped</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#SHZ-8839</td>
+                        <td>Oluwaseun Adeyemi</td>
+                        <td>Infinix Hot 40</td>
+                        <td>&#8358;125,000</td>
+                        <td>Jul 17, 2026</td>
+                        <td><span class="status-badge status-delivered">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#SHZ-8835</td>
+                        <td>Amina Yusuf</td>
+                        <td>Shea Butter (500ml) x3</td>
+                        <td>&#8358;9,000</td>
+                        <td>Jul 16, 2026</td>
+                        <td><span class="status-badge status-delivered">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#SHZ-8830</td>
+                        <td>Ibrahim Danjuma</td>
+                        <td>Football Jersey</td>
+                        <td>&#8358;8,500</td>
+                        <td>Jul 16, 2026</td>
+                        <td><span class="status-badge status-shipped">Shipped</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#SHZ-8827</td>
+                        <td>Blessing Eze</td>
+                        <td>Indomie Carton x2</td>
+                        <td>&#8358;12,000</td>
+                        <td>Jul 15, 2026</td>
+                        <td><span class="status-badge status-delivered">Delivered</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
+    <script src="orders.js"></script>
     <script src="customize.js"></script>
     <!-- ============ CUSTOMIZE PANEL ============ -->
     <button class="customize-fab" id="customizeFab">

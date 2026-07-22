@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨SHOBZ — Shop Quality Products</title>
+    <title>✨Shop — SHOBZ</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="customize.css">
 </head>
 <body>
@@ -35,9 +35,11 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="products.html" class="nav-link">Shop</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Shop</a></li>
                 <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="orders.html" class="nav-link">Orders</a></li>
+                <li><a href="analytics.html" class="nav-link">Analytics</a></li>
             </ul>
 
             <div class="nav-right">
@@ -46,7 +48,7 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" placeholder="Search products..." id="homeSearchInput">
+                    <input type="text" placeholder="Search..." id="navSearchInput">
                 </div>
                 <div class="nav-icons">
                     <button class="nav-icon-btn" id="notifBtn">
@@ -55,6 +57,14 @@
                             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                         </svg>
                         <span class="notif-dot"></span>
+                    </button>
+                    <button class="nav-icon-btn cart-nav-btn" id="cartToggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCountNav">0</span>
                     </button>
                     <div class="user-avatar">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -73,156 +83,154 @@
     </nav>
 
     <!-- ============ HERO SECTION ============ -->
-    <section class="home-hero">
-        <div class="home-hero-glow home-glow-left"></div>
-        <div class="home-hero-glow home-glow-right"></div>
-        <div class="home-emoji-bg">
-            <span class="emoji-float" style="--x:8%;--y:15%;--dur:6s;--delay:0s;--size:38px;">🛒</span>
-            <span class="emoji-float" style="--x:20%;--y:70%;--dur:7s;--delay:1s;--size:32px;">👔</span>
-            <span class="emoji-float" style="--x:35%;--y:25%;--dur:5.5s;--delay:0.5s;--size:36px;">📱</span>
-            <span class="emoji-float" style="--x:50%;--y:80%;--dur:8s;--delay:2s;--size:30px;">🍚</span>
-            <span class="emoji-float" style="--x:65%;--y:18%;--dur:6.5s;--delay:1.5s;--size:34px;">⚽</span>
-            <span class="emoji-float" style="--x:78%;--y:65%;--dur:7.5s;--delay:0.8s;--size:40px;">🎧</span>
-            <span class="emoji-float" style="--x:90%;--y:30%;--dur:5s;--delay:2.5s;--size:28px;">🧴</span>
-            <span class="emoji-float" style="--x:12%;--y:45%;--dur:9s;--delay:3s;--size:26px;">🍜</span>
-            <span class="emoji-float" style="--x:42%;--y:10%;--dur:7s;--delay:1.2s;--size:32px;">🎭</span>
-            <span class="emoji-float" style="--x:55%;--y:50%;--dur:6s;--delay:0.3s;--size:30px;">🌶️</span>
-            <span class="emoji-float" style="--x:72%;--y:85%;--dur:8s;--delay:2.2s;--size:34px;">🌿</span>
-            <span class="emoji-float" style="--x:85%;--y:12%;--dur:5.5s;--delay:1.8s;--size:28px;">💻</span>
-            <span class="emoji-float" style="--x:28%;--y:88%;--dur:7s;--delay:0.6s;--size:36px;">🧣</span>
-            <span class="emoji-float" style="--x:95%;--y:55%;--dur:6.5s;--delay:3.5s;--size:32px;">👑</span>
-            <span class="emoji-float" style="--x:5%;--y:90%;--dur:8s;--delay:1s;--size:30px;">🫘</span>
-        </div>
-        <div class="home-hero-content">
-            <p class="home-hero-tag">Welcome to SHOBZ</p>
-            <h1 class="home-hero-title">Nigeria's Marketplace for Quality Products</h1>
-            <p class="home-hero-subtitle">From ankara fashion to premium groceries, tech gadgets to indigenous beauty — shop authentic Nigerian products at the best prices.</p>
-            <div class="home-hero-actions">
-                <a href="products.html" class="action-btn btn-primary home-cta">Browse Shop</a>
-                <a href="#categories" class="action-btn btn-outline home-cta-outline">Explore Categories</a>
-            </div>
-            <div class="home-hero-stats">
-                <div class="home-stat">
-                    <span class="home-stat-num">64+</span>
-                    <span class="home-stat-label">Products</span>
-                </div>
-                <div class="home-stat-divider"></div>
-                <div class="home-stat">
-                    <span class="home-stat-num">9</span>
-                    <span class="home-stat-label">Categories</span>
-                </div>
-                <div class="home-stat-divider"></div>
-                <div class="home-stat">
-                    <span class="home-stat-num">4.7</span>
-                    <span class="home-stat-label">Avg. Rating</span>
-                </div>
-            </div>
+    <section class="shop-hero">
+        <div class="shop-hero-glow glow-hero-left"></div>
+        <div class="shop-hero-glow glow-hero-right"></div>
+        <div class="shop-hero-content">
+            <h1 class="shop-hero-title">Shop Our Collection</h1>
+            <p class="shop-hero-subtitle">Authentic Nigerian products — from fashion to groceries</p>
         </div>
     </section>
 
-    <!-- ============ CATEGORIES SECTION ============ -->
-    <section class="home-section" id="categories">
-        <div class="home-container">
-            <div class="home-section-header">
-                <h2 class="home-section-title">Shop by Category</h2>
-                <p class="home-section-subtitle">Find exactly what you need across our curated collections</p>
-            </div>
-            <div class="home-categories-grid">
-                <a href="products.html?category=fashion" class="home-category-card">
-                    <span class="home-category-emoji">👔</span>
-                    <h3 class="home-category-name">Fashion</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
-                <a href="products.html?category=food" class="home-category-card">
-                    <span class="home-category-emoji">🍚</span>
-                    <h3 class="home-category-name">Food & Spices</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
-                <a href="products.html?category=tech" class="home-category-card">
-                    <span class="home-category-emoji">📱</span>
-                    <h3 class="home-category-name">Phones & Tech</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
-                <a href="products.html?category=beauty" class="home-category-card">
-                    <span class="home-category-emoji">🧴</span>
-                    <h3 class="home-category-name">Beauty</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
-                <a href="products.html?category=home" class="home-category-card">
-                    <span class="home-category-emoji">🎭</span>
-                    <h3 class="home-category-name">Home & Living</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
-                <a href="products.html?category=health" class="home-category-card">
-                    <span class="home-category-emoji">🌿</span>
-                    <h3 class="home-category-name">Health & Wellness</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
-                <a href="products.html?category=groceries" class="home-category-card">
-                    <span class="home-category-emoji">🍜</span>
-                    <h3 class="home-category-name">Groceries</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
-                <a href="products.html?category=sports" class="home-category-card">
-                    <span class="home-category-emoji">⚽</span>
-                    <h3 class="home-category-name">Sports & Fitness</h3>
-                    <p class="home-category-count">8 products</p>
-                </a>
+    <!-- ============ MAIN SHOP CONTENT ============ -->
+    <main class="shop-container">
+
+        <!-- Category Filter Bar -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-category="all">All Products</button>
+            <button class="filter-btn" data-category="fashion">Fashion</button>
+            <button class="filter-btn" data-category="food">Food & Spices</button>
+            <button class="filter-btn" data-category="tech">Phones & Tech</button>
+            <button class="filter-btn" data-category="beauty">Beauty</button>
+            <button class="filter-btn" data-category="home">Home & Living</button>
+            <button class="filter-btn" data-category="health">Health</button>
+            <button class="filter-btn" data-category="groceries">Groceries</button>
+            <button class="filter-btn" data-category="sports">Sports & Fitness</button>
+        </div>
+
+        <!-- Results Bar -->
+        <div class="results-bar">
+            <p class="results-count"><span id="productCount">0</span> products found</p>
+            <div class="sort-control">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-az">Name: A-Z</option>
+                    <option value="rating">Top Rated</option>
+                </select>
             </div>
         </div>
-    </section>
 
-    <!-- ============ FEATURED PRODUCTS SECTION ============ -->
-    <section class="home-section home-section-alt" id="featured">
-        <div class="home-container">
-            <div class="home-section-header">
-                <h2 class="home-section-title">Featured Products</h2>
-                <p class="home-section-subtitle">Handpicked top sellers loved by our customers</p>
-            </div>
-            <div class="home-featured-grid" id="featuredGrid">
-                <!-- Injected by JS -->
-            </div>
-            <div class="home-featured-cta">
-                <a href="products.html" class="action-btn btn-primary">View All Products</a>
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+            <!-- Products injected by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <p>No products found matching your search.</p>
+            <button class="action-btn btn-primary" id="clearSearchBtn">Clear Filters</button>
+        </div>
+
+    </main>
+
+    <!-- ============ CART SIDEBAR ============ -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="m1 1 4 0 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <p>Your cart is empty</p>
             </div>
         </div>
-    </section>
+        <div class="cart-sidebar-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total-row">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₦0</span>
+            </div>
+            <div class="cart-total-row cart-total-final">
+                <span>Total</span>
+                <span id="cartTotal">₦0</span>
+            </div>
+            <button class="action-btn btn-primary btn-checkout">Proceed to Checkout</button>
+            <button class="action-btn btn-outline btn-continue" id="continueShopping">Continue Shopping</button>
+        </div>
+    </aside>
 
-    <!-- ============ FOOTER ============ -->
-    <footer class="home-footer">
-        <div class="home-container">
-            <div class="home-footer-grid">
-                <div class="home-footer-brand">
-                    <span class="brand-name">SHOBZ</span>
-                    <p class="home-footer-desc">Authentic Nigerian products curated for every lifestyle. Shop with confidence.</p>
-                </div>
-                <div class="home-footer-links">
-                    <h4>Shop</h4>
-                    <a href="products.html">All Products</a>
-                    <a href="products.html?category=fashion">Fashion</a>
-                    <a href="products.html?category=tech">Tech</a>
-                    <a href="products.html?category=groceries">Groceries</a>
-                </div>
-                <div class="home-footer-links">
-                    <h4>Company</h4>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact</a>
-                    <a href="dashboard.html">Dashboard</a>
-                </div>
-                <div class="home-footer-links">
-                    <h4>Support</h4>
-                    <a href="#">Help Center</a>
-                    <a href="#">Returns</a>
-                    <a href="#">Shipping</a>
+    <!-- ============ TRANSACTION MODAL ============ -->
+    <div class="txn-overlay" id="txnOverlay"></div>
+    <div class="txn-modal" id="txnModal">
+        <div class="txn-content" id="txnContent">
+            <!-- Step 1: Processing -->
+            <div class="txn-step" id="txnStep1">
+                <div class="txn-spinner"></div>
+                <h3 class="txn-title">Processing Payment</h3>
+                <p class="txn-text">Verifying your order details...</p>
+                <div class="txn-progress">
+                    <div class="txn-progress-bar" id="txnProgress1"></div>
                 </div>
             </div>
-            <div class="home-footer-bottom">
-                <p>&copy; 2026 SHOBZ. All rights reserved.</p>
+            <!-- Step 2: Confirming -->
+            <div class="txn-step" id="txnStep2" style="display:none;">
+                <div class="txn-spinner"></div>
+                <h3 class="txn-title">Confirming Transaction</h3>
+                <p class="txn-text">Connecting to payment gateway...</p>
+                <div class="txn-progress">
+                    <div class="txn-progress-bar" id="txnProgress2"></div>
+                </div>
+            </div>
+            <!-- Step 3: Receipt -->
+            <div class="txn-step" id="txnStep3" style="display:none;">
+                <div class="txn-receipt-icon">
+                    <svg viewBox="0 0 52 52" fill="none">
+                        <circle cx="26" cy="26" r="25" stroke="#0B3954" stroke-width="2"/>
+                        <path class="txn-check" d="M14 27l7 7 16-16" stroke="#0B3954" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="txn-title txn-success-title">Payment Successful</h3>
+                <div class="txn-receipt">
+                    <div class="txn-receipt-row txn-receipt-header">
+                        <span>Order Receipt</span>
+                        <span id="txnOrderId">#SHZ-0000</span>
+                    </div>
+                    <div class="txn-receipt-items" id="txnReceiptItems"></div>
+                    <div class="txn-receipt-row txn-receipt-total">
+                        <span>Total Paid</span>
+                        <span id="txnReceiptTotal">₦0</span>
+                    </div>
+                    <div class="txn-receipt-row txn-receipt-date">
+                        <span id="txnDate"></span>
+                    </div>
+                </div>
+                <button class="action-btn btn-primary txn-done-btn" id="txnDoneBtn">Done</button>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="home.js"></script>
+    <!-- ============ TOAST ============ -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
     <script src="customize.js"></script>
     <!-- ============ CUSTOMIZE PANEL ============ -->
     <button class="customize-fab" id="customizeFab">
